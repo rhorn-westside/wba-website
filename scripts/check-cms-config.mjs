@@ -12,9 +12,12 @@ const problems = [];
 
 for (const entry of cfg.content) {
   if (!existsSync(entry.path)) {
-    problems.push(`missing file — ${entry.label}: ${entry.path}`);
+    problems.push(`missing path — ${entry.label}: ${entry.path}`);
     continue;
   }
+  // Collections point at a directory of files an editor creates. There is no
+  // single file to compare against, so there is nothing here to drift.
+  if (entry.type === "collection") continue;
   const declared = new Set(entry.fields.map((f) => f.name));
   const raw = await readFile(entry.path, "utf8");
 

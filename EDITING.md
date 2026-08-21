@@ -27,6 +27,8 @@ Down the left-hand side you'll see these.
 | **Faculty & Staff** | Adding, removing or updating staff |
 | **School Information** | Phone, address, office hours, service times |
 | **Pages** | The wording on any page of the site |
+| **New Pages** | Creating a page that doesn't exist yet |
+| **Navigation Menu** | What appears in the menu across the top |
 
 Changes go live about two minutes after you press **Save**. Refresh the website to see them.
 
@@ -41,6 +43,8 @@ Changes go live about two minutes after you press **Save**. Refresh the website 
 5. **Save**
 
 The banner appears across the top of every page. Setting the take-down time matters: it means the notice disappears by itself, so a Monday closure isn't still showing on Thursday.
+
+**The take-down time must be in the future.** If you set a time that has already passed, the banner will not appear at all — the site treats it as already finished. If you turn the banner on and nothing shows up on the website, this is almost certainly why. Check the date and time, or clear the field entirely to leave the banner up until you switch it off.
 
 To take it down early, switch **Show the banner** off and save.
 
@@ -80,6 +84,31 @@ Drag the handle on the left of each person to reorder them within a section.
 The editor works like a word processor — bold, headings, lists and links all have buttons. The **Page title** and **Intro line** at the top are the heading and grey sentence beneath it.
 
 You will sometimes see yellow **Needs content** boxes on the live site. Those are notes about something still missing. When you've supplied it, delete the whole yellow box from the page text.
+
+---
+
+## Adding a new page
+
+Two steps: make the page, then put it in the menu so people can find it.
+
+**Make the page**
+
+1. **New Pages** → **Add an entry**
+2. Give it a title, an intro line, and the text
+3. **Save**
+
+Your page is now live, but nothing links to it yet. Its web address is `/pages/` followed by the title in lowercase with hyphens instead of spaces — a page called **Summer Camp** becomes `/pages/summer-camp/`.
+
+**Put it in the menu**
+
+1. **Navigation Menu**
+2. **Add an entry** for a new top-level item, or open an existing one and add a drop-down item beneath it
+3. Menu wording is what people see; the web address is the `/pages/summer-camp/` part
+4. **Save**
+
+Drag entries to reorder them. Removing something from the menu does not delete the page — it just stops linking to it.
+
+**A word of advice.** A menu with seven items is easy to scan; one with twelve is not. Before adding a top-level item, consider whether the page belongs as a drop-down under one that already exists.
 
 ---
 

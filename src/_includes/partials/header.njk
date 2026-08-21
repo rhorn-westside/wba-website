@@ -24,7 +24,7 @@
 
     <nav class="primary-nav" id="primary-nav" aria-label="Main">
       <ul class="primary-nav__list">
-        {% for item in nav %}
+        {% for item in nav.items %}
         <li class="primary-nav__item{% if item.children %} has-children{% endif %}">
           <a href="{{ item.url }}"{% if page.url.startsWith(item.url) and item.url != "/" %} aria-current="true"{% endif %}>{{ item.title }}</a>
           {% if item.children %}

@@ -1,34 +1,122 @@
-[
-  { "title": "About", "url": "/about/", "children": [
-    { "title": "About the Academy", "url": "/about/" },
-    { "title": "What We Believe", "url": "/about/beliefs/" },
-    { "title": "Faculty & Staff", "url": "/about/faculty/" },
-    { "title": "Our Church", "url": "/about/church/" }
-  ]},
-  { "title": "Academics", "url": "/academics/", "children": [
-    { "title": "Overview", "url": "/academics/" },
-    { "title": "Elementary (K5–5)", "url": "/academics/elementary/" },
-    { "title": "Junior & Senior High (6–12)", "url": "/academics/secondary/" },
-    { "title": "Grading & Reporting", "url": "/academics/grading/" }
-  ]},
-  { "title": "Student Life", "url": "/student-life/", "children": [
-    { "title": "Student Life", "url": "/student-life/" },
-    { "title": "Dress Code", "url": "/student-life/dress-code/" },
-    { "title": "Standard of Conduct", "url": "/student-life/conduct/" }
-  ]},
-  { "title": "Admissions", "url": "/admissions/", "children": [
-    { "title": "Why Westside Baptist Academy", "url": "/admissions/" },
-    { "title": "How to Apply", "url": "/admissions/apply/" },
-    { "title": "Tuition & Fees", "url": "/admissions/tuition/" },
-    { "title": "Schedule a Tour", "url": "/admissions/visit/" }
-  ]},
-  { "title": "Current Families", "url": "/families/", "children": [
-    { "title": "Family Resources", "url": "/families/" },
-    { "title": "School Calendar", "url": "/families/calendar/" },
-    { "title": "Attendance", "url": "/families/attendance/" },
-    { "title": "Homework", "url": "/families/homework/" },
-    { "title": "Forms & Documents", "url": "/families/forms/" }
-  ]},
-  { "title": "Give", "url": "/give/" },
-  { "title": "Contact", "url": "/contact/" }
-]
+{
+  "items": [
+    {
+      "title": "About",
+      "url": "/about/",
+      "children": [
+        {
+          "title": "About the Academy",
+          "url": "/about/"
+        },
+        {
+          "title": "What We Believe",
+          "url": "/about/beliefs/"
+        },
+        {
+          "title": "Faculty & Staff",
+          "url": "/about/faculty/"
+        },
+        {
+          "title": "Our Church",
+          "url": "/about/church/"
+        }
+      ]
+    },
+    {
+      "title": "Academics",
+      "url": "/academics/",
+      "children": [
+        {
+          "title": "Overview",
+          "url": "/academics/"
+        },
+        {
+          "title": "Elementary (K5–5)",
+          "url": "/academics/elementary/"
+        },
+        {
+          "title": "Junior & Senior High (6–12)",
+          "url": "/academics/secondary/"
+        },
+        {
+          "title": "Grading & Reporting",
+          "url": "/academics/grading/"
+        }
+      ]
+    },
+    {
+      "title": "Student Life",
+      "url": "/student-life/",
+      "children": [
+        {
+          "title": "Student Life",
+          "url": "/student-life/"
+        },
+        {
+          "title": "Dress Code",
+          "url": "/student-life/dress-code/"
+        },
+        {
+          "title": "Standard of Conduct",
+          "url": "/student-life/conduct/"
+        }
+      ]
+    },
+    {
+      "title": "Admissions",
+      "url": "/admissions/",
+      "children": [
+        {
+          "title": "Why Westside Baptist Academy",
+          "url": "/admissions/"
+        },
+        {
+          "title": "How to Apply",
+          "url": "/admissions/apply/"
+        },
+        {
+          "title": "Tuition & Fees",
+          "url": "/admissions/tuition/"
+        },
+        {
+          "title": "Schedule a Tour",
+          "url": "/admissions/visit/"
+        }
+      ]
+    },
+    {
+      "title": "Current Families",
+      "url": "/families/",
+      "children": [
+        {
+          "title": "Family Resources",
+          "url": "/families/"
+        },
+        {
+          "title": "School Calendar",
+          "url": "/families/calendar/"
+        },
+        {
+          "title": "Attendance",
+          "url": "/families/attendance/"
+        },
+        {
+          "title": "Homework",
+          "url": "/families/homework/"
+        },
+        {
+          "title": "Forms & Documents",
+          "url": "/families/forms/"
+        }
+      ]
+    },
+    {
+      "title": "Give",
+      "url": "/give/"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact/"
+    }
+  ]
+}

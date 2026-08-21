@@ -36,13 +36,13 @@ content:
         type: text
         description: "Two sentences at most: what is closed, which day, and when it reopens."
       - name: expires
-        label: Take down automatically after
+        label: Take down automatically after — MUST be in the future
         type: date
         options:
           format: yyyy-MM-dd'T'HH:mm:ssXXX
           time: true
         required: false
-        description: Optional but recommended. The banner hides itself once this time passes, so it never gets left up.
+        description: "Usually the morning school reopens. The banner disappears by itself once this time passes. Warning: if you set a time that has already gone by, the banner will not appear at all. Leave this empty to keep the banner up until you switch it off."
       - name: _howToUse
         label: Notes for staff
         type: string
@@ -179,6 +179,60 @@ content:
       - { name: logo, label: Header logo file (leave as it is), type: string }
       - { name: logoLarge, label: Large logo file (leave as it is), type: string }
       - { name: url, label: Website address (leave as it is), type: string }
+
+  # -------------------------------------------------------------------
+  - name: newpages
+    label: "New Pages"
+    type: collection
+    path: src/pages
+    filename: "{primary}.md"
+    view:
+      fields: [title, lede]
+    description: "Pages you create yourself. After making one, add it to the Navigation Menu so people can find it."
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        required: false
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+
+  # -------------------------------------------------------------------
+  - name: navigation
+    label: "Navigation Menu"
+    type: file
+    path: src/_data/nav.json
+    description: "The menu across the top of every page. Drag to reorder."
+    fields:
+      - name: items
+        label: Menu items
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Menu wording
+            type: string
+          - name: url
+            label: Web address it points to
+            type: string
+            description: "Start and end with a slash, e.g. /pages/summer-camp/ — a page you created lives under /pages/ followed by its name in lowercase with hyphens."
+          - name: children
+            label: Drop-down items
+            type: object
+            list: true
+            required: false
+            fields:
+              - name: title
+                label: Menu wording
+                type: string
+              - name: url
+                label: Web address it points to
+                type: string
 
   # -------------------------------------------------------------------
   # Pages — the wording of each page of the site.
