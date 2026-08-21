@@ -1,11 +1,11 @@
 ---
-layout: layouts/page.njk
-eyebrow: Student Life
 title: Dress Code
-lede: Westside Baptist Academy strives to maintain a clear testimony of holiness and righteousness in all areas, including how students dress.
+lede: Westside Baptist Academy strives to maintain a clear testimony of holiness
+  and righteousness in all areas, including how students dress.
+eyebrow: Student Life
+layout: layouts/page.njk
 permalink: /student-life/dress-code/
 ---
-
 A student's appearance either compliments or detracts from their Christian testimony, and the way a student is dressed often affects their attitude toward what they are doing.
 
 All pants, shirts, skirts, blouses and ties must match the dress code as found on the **French Toast website**, using only the stock numbers posted by the school.
@@ -71,9 +71,3 @@ Students who violate the dress code may be sent home or kept in the office while
 ## For parents and visitors
 
 We ask that parents abide by the dress code when outside their cars on campus, and that loud music not be played in cars on campus. Former students and graduates attending ball games or visiting campus are asked to honor the dress code and standard of conduct.
-
-{% todo "French Toast stock numbers" %}
-The handbook says uniform items are ordered from the French Toast website "using only the stock numbers posted on the WBA website." Those stock numbers should be published on this page — a short table of item, stock number and which grades it applies to — along with a direct link to the Westside Baptist Academy section of the French Toast site.
-
-That list is the single most-asked-for thing on any school uniform page, and right now this page tells parents it exists somewhere without saying where.
-{% endtodo %}
