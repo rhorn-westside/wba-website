@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+<div class="page-head">
+  <div class="wrap">
+    {% if eyebrow %}<span class="section__eyebrow">{{ eyebrow }}</span>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lede %}<p class="page-head__lede">{{ lede }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>
+
+{% if not hideCta %}
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Come see the Academy</h2>
+    <p>The best way to understand Westside Baptist Academy is to walk the halls while school is in session. Tours take about an hour.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="/admissions/visit/">Schedule a Tour</a>
+      <a class="btn btn--light" href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a>
+    </div>
+  </div>
+</section>
+{% endif %}

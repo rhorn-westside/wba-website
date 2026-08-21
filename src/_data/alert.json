@@ -1,0 +1,13 @@
+{
+  "active": false,
+  "title": "School is closed today",
+  "message": "Westside Baptist Academy is closed Tuesday, January 20 due to weather. Classes resume Wednesday. Watch for a Schoolcast message if anything changes.",
+  "expires": "",
+  "_howToUse": [
+    "To switch the banner ON: set active to true, edit title and message, set expires, commit.",
+    "To switch it OFF: set active back to false, commit.",
+    "expires is optional. Give it a date and time and the banner hides itself once that moment passes, even before anyone rebuilds the site. Format: 2027-01-21T12:00:00-06:00 (that offset is Central Time; use -05:00 during daylight saving).",
+    "Leave expires empty and the banner stays up until someone turns it off.",
+    "Keep the message short. Say what is closed, which day, and when it reopens."
+  ]
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "group": "Book & Material Lists, 2026–2027",
+    "intro": "One list per grade. Amounts shown are due to the office by August 15.",
+    "columns": true,
+    "items": [
+      {
+        "title": "Kindergarten",
+        "file": "2026-2027-book-list-kindergarten.pdf",
+        "note": ""
+      },
+      {
+        "title": "1st Grade",
+        "file": "2026-2027-book-list-grade-01.pdf",
+        "note": ""
+      },
+      {
+        "title": "2nd Grade",
+        "file": "2026-2027-book-list-grade-02.pdf",
+        "note": ""
+      },
+      {
+        "title": "3rd Grade",
+        "file": "2026-2027-book-list-grade-03.pdf",
+        "note": ""
+      },
+      {
+        "title": "4th Grade",
+        "file": "2026-2027-book-list-grade-04.pdf",
+        "note": ""
+      },
+      {
+        "title": "5th Grade",
+        "file": "2026-2027-book-list-grade-05.pdf",
+        "note": ""
+      },
+      {
+        "title": "6th Grade",
+        "file": "2026-2027-book-list-grade-06.pdf",
+        "note": ""
+      },
+      {
+        "title": "7th Grade",
+        "file": "2026-2027-book-list-grade-07.pdf",
+        "note": ""
+      },
+      {
+        "title": "8th Grade",
+        "file": "2026-2027-book-list-grade-08.pdf",
+        "note": ""
+      },
+      {
+        "title": "9th Grade",
+        "file": "2026-2027-book-list-grade-09.pdf",
+        "note": ""
+      },
+      {
+        "title": "10th Grade",
+        "file": "2026-2027-book-list-grade-10.pdf",
+        "note": ""
+      },
+      {
+        "title": "11th Grade",
+        "file": "2026-2027-book-list-grade-11.pdf",
+        "note": ""
+      },
+      {
+        "title": "12th Grade",
+        "file": "2026-2027-book-list-grade-12.pdf",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "group": "Supply Lists, 2026–2027",
+    "intro": "Label everything with your child's name in permanent marker, and send it all on the first day of school.",
+    "items": [
+      {
+        "title": "Elementary Supply List",
+        "file": "2026-2027-elementary-supply-list.pdf",
+        "note": "K5 through 5th grade"
+      },
+      {
+        "title": "Jr. & Sr. High Supply List",
+        "file": "2026-2027-jr-sr-high-supply-list.pdf",
+        "note": "6th through 12th grade"
+      }
+    ]
+  },
+  {
+    "group": "Enrollment",
+    "items": [
+      {
+        "title": "New Student Application",
+        "file": "wba-new-student-application.pdf",
+        "note": ""
+      },
+      {
+        "title": "Financial Information Page",
+        "file": "2026-2027-financial-information.pdf",
+        "note": "Tuition, fees and the payment agreement"
+      },
+      {
+        "title": "Parent Agreements — Parts 1 & 2",
+        "file": "wba-parent-agreements.pdf",
+        "note": "Part 2 must be notarized"
+      },
+      {
+        "title": "Church Affiliation Confirmation Form",
+        "file": "church-affiliation-confirmation-form.pdf",
+        "note": ""
+      },
+      {
+        "title": "Student Church Attendance Form",
+        "file": "",
+        "note": ""
+      },
+      {
+        "title": "Student Handbook",
+        "file": "",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "group": "Permissions & Athletics",
+    "items": [
+      {
+        "title": "Sports Registration Form",
+        "file": "2026-2027-sports-registration-form.pdf",
+        "note": "One per sport, per season"
+      },
+      {
+        "title": "Physical Evaluation Form",
+        "file": "",
+        "note": ""
+      },
+      {
+        "title": "Pick Up Permission Slip",
+        "file": "",
+        "note": "Names anyone besides a parent who may collect a student."
+      }
+    ]
+  }
+]

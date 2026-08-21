@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+title: Forms & Documents
+description: Book lists, supply lists, applications, permission slips and athletics forms for Westside Baptist Academy families.
+permalink: /families/forms/
+---
+
+<div class="page-head">
+  <div class="wrap">
+    <span class="section__eyebrow">Current Families</span>
+    <h1>Forms &amp; Documents</h1>
+    <p class="page-head__lede">Everything the office is likely to ask you for, in one place.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <div class="prose prose--wide">
+
+      {% for group in forms %}
+      <h2>{{ group.group }}</h2>
+      {% if group.intro %}<p>{{ group.intro }}</p>{% endif %}
+      <ul class="filelist{% if group.columns %} filelist--columns{% endif %}">
+        {% for item in group.items %}
+        <li>
+          {% if item.file %}
+          <a href="/files/{{ item.file }}">
+            <span class="filelist__title">{{ item.title }}</span>
+            <span class="filelist__note">{% if item.note %}{{ item.note }}{% else %}PDF{% endif %}</span>
+          </a>
+          {% else %}
+          <span class="filelist__pending">
+            <span class="filelist__title">{{ item.title }}</span>
+            <span class="filelist__note">Coming soon</span>
+          </span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+
+      {% todo "Four documents still to upload" %}
+      <p>Four items above have no file attached yet and show as “Coming soon” to parents: the Student Church Attendance Form, the Student Handbook, the athletics Physical Evaluation Form, and the Pick Up Permission Slip.</p>
+      {% endtodo %}
+
+      <h2>Trouble with a form?</h2>
+      <p>Call the office at <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a> or email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>. Paper copies are always available in the school office.</p>
+
+    </div>
+  </div>
+</div>

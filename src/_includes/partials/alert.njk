@@ -1,0 +1,11 @@
+{% if alert.active %}
+<aside class="alert" role="alert" data-expires="{{ alert.expires }}">
+  <div class="wrap alert__inner">
+    <span class="alert__badge" aria-hidden="true">!</span>
+    <p class="alert__text">
+      {% if alert.title %}<strong>{{ alert.title }}</strong>{% endif %}
+      {% if alert.message %}<span>{{ alert.message }}</span>{% endif %}
+    </p>
+  </div>
+</aside>
+{% endif %}

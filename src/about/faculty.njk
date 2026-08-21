@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+title: Faculty & Staff
+description: The faculty and staff of Westside Baptist Academy are ministry-minded individuals who know each student by name.
+permalink: /about/faculty/
+---
+
+<div class="page-head">
+  <div class="wrap">
+    <span class="section__eyebrow">About</span>
+    <h1>Faculty &amp; Staff</h1>
+    <p class="page-head__lede">The faculty and staff of Westside Baptist Academy are ministry-minded individuals. Most will teach your child for more than one year — and will know them long after.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+
+    {% set groups = ["Administration", "Elementary", "Junior & Senior High", "Fine Arts"] %}
+    {% for group in groups %}
+      {% set members = faculty | where("group", group) %}
+      {% if members.length %}
+      <div class="faculty-group">
+        <h2>{{ group }}</h2>
+        <div class="grid grid--4">
+          {% for person in members %}
+          <div class="person">
+            <div class="person__photo" aria-hidden="true">{{ person.name | initial }}</div>
+            <p class="person__name">{{ person.name }}</p>
+            <p class="person__role">{{ person.role }}</p>
+            {% if person.bio %}<p class="person__bio">{{ person.bio }}</p>{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="prose">
+      
+
+      <h2>Join our faculty</h2>
+      <p>Westside Baptist Academy hires teachers who are believers first and teachers second, though we want both. If you are interested in teaching here, write to <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a> or call the office at <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a>.</p>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Meet them in person</h2>
+    <p>A tour during the school day is the only honest way to see how teachers and students actually talk to each other.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="/admissions/visit/">Schedule a Tour</a>
+    </div>
+  </div>
+</section>

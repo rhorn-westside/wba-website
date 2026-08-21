@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: Contact Westside Baptist Academy in Katy, Texas — phone, email, address and office hours.
+permalink: /contact/
+---
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>Contact Us</h1>
+    <p class="page-head__lede">Call during school hours and a person will answer.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <div class="grid grid--3">
+
+      <div class="card">
+        <h3>School Office</h3>
+        <p>
+          <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a><br>
+          <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+        </p>
+        <p class="card__meta">{{ site.contact.officeHours }}</p>
+      </div>
+
+      <div class="card">
+        <h3>Campus</h3>
+        <address>
+          {{ site.contact.street }}<br>
+          {{ site.contact.city }}, {{ site.contact.state }} {{ site.contact.zip }}
+        </address>
+        <p><a href="https://maps.google.com/?q={{ site.contact.street | urlencode }},+{{ site.contact.city }},+{{ site.contact.state }}+{{ site.contact.zip }}">Directions &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Visiting campus</h3>
+        <p>Westside Baptist Academy is a closed campus. All visitors sign in at the main office, entering through the main front doors, and wear a badge while on campus.</p>
+        <p><a href="/admissions/visit/">Schedule a tour &rarr;</a></p>
+      </div>
+
+    </div>
+
+    <div class="grid grid--2 u-mt-lg">
+
+      <div class="prose">
+        <h2>Who to ask</h2>
+        <table>
+          <tbody>
+            <tr><th scope="row">Enrollment and tours</th><td>School office</td></tr>
+            <tr><th scope="row">Tuition and billing</th><td>School office</td></tr>
+            <tr><th scope="row">An assignment or a grade</th><td>Your child's teacher</td></tr>
+            <tr><th scope="row">Attendance and absences</th><td>School office</td></tr>
+            <tr><th scope="row">Discipline and policy</th><td>Mr. Ray Horn, Principal</td></tr>
+            <tr><th scope="row">Church questions</th><td><a href="{{ site.church.url }}">{{ site.church.name }}</a></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Employment</h2>
+        <p>Westside Baptist Academy hires teachers who share the convictions of this ministry. Inquiries to <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+      </div>
+
+      <div class="prose">
+        <h2>Church service times</h2>
+        <table>
+          <tbody>
+            {% for s in site.church.services %}
+            <tr><th scope="row">{{ s.name }}</th><td>{{ s.time }}</td></tr>
+            {% endfor %}
+            <tr><th scope="row">Saturday Soul Winning</th><td>9:30 AM</td></tr>
+          </tbody>
+        </table>
+        <p>Visitors are welcome at any service.</p>
+      </div>
+
+    </div>
+
+    <div class="prose u-mt-md">
+      {% todo "Map and photo" %}
+      <p>An embedded map and a photograph of the campus entrance both belong on this page. A picture of the door a visitor should walk through removes real friction on the day of a tour.</p>
+      {% endtodo %}
+    </div>
+
+  </div>
+</div>

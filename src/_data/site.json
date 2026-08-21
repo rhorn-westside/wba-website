@@ -1,0 +1,50 @@
+{
+  "name": "Westside Baptist Academy",
+  "shortName": "WBA",
+  "tagline": "A Christ-centered, college-preparatory education in Katy, Texas.",
+  "purpose": "Our main purpose is to help Christian parents train their children by providing quality academics and consistent character training in a supportive environment.",
+  "founded": 2007,
+  "grades": "K5 through 12th Grade",
+  "mascot": "Warriors",
+  "logo": "/assets/img/logo-160.png",
+  "church": {
+    "name": "Westside Baptist Church",
+    "url": "https://www.mywestside.org/",
+    "pastor": "Pastor Richard D. Butts",
+    "services": [
+      {
+        "name": "Sunday School",
+        "time": "9:30 AM"
+      },
+      {
+        "name": "Sunday Worship",
+        "time": "10:45 AM"
+      },
+      {
+        "name": "Sunday Evening",
+        "time": "6:30 PM"
+      },
+      {
+        "name": "Wednesday Evening",
+        "time": "7:30 PM"
+      }
+    ]
+  },
+  "contact": {
+    "street": "3883 Lakes of Bridgewater Dr.",
+    "city": "Katy",
+    "state": "TX",
+    "zip": "77449",
+    "phone": "(281) 492-3448",
+    "phoneHref": "+12814923448",
+    "email": "principal@mywestside.org",
+    "officeHours": "Monday–Friday, 7:35 AM – 3:30 PM"
+  },
+  "schoolDay": {
+    "start": "7:45 AM",
+    "elementaryEnd": "3:05 PM",
+    "secondaryEnd": "3:15 PM"
+  },
+  "url": "https://www.westsidebaptistacademy.org",
+  "logoLarge": "/assets/img/logo-anniversary-640.png"
+}

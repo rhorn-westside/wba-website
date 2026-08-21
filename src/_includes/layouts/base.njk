@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }} — Christian School in Katy, TX{% endif %}</title>
+<meta name="description" content="{{ description or site.purpose }}">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or site.purpose }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "School",
+  "name": "{{ site.name }}",
+  "description": "{{ site.purpose }}",
+  "foundingDate": "{{ site.founded }}",
+  "telephone": "{{ site.contact.phone }}",
+  "email": "{{ site.contact.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.contact.street }}",
+    "addressLocality": "{{ site.contact.city }}",
+    "addressRegion": "{{ site.contact.state }}",
+    "postalCode": "{{ site.contact.zip }}",
+    "addressCountry": "US"
+  },
+  "parentOrganization": {
+    "@type": "Church",
+    "name": "{{ site.church.name }}",
+    "url": "{{ site.church.url }}"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "partials/alert.njk" %}
+{% include "partials/header.njk" %}
+<main id="main">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

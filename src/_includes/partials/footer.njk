@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+
+    <div class="site-footer__col site-footer__col--brand">
+      <p class="site-footer__name">Westside Baptist Academy</p>
+      <p class="site-footer__note">A ministry of <a href="{{ site.church.url }}">{{ site.church.name }}</a></p>
+      <p class="site-footer__note">Serving Katy families since {{ site.founded }}</p>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__head">Visit</h2>
+      <address>
+        {{ site.contact.street }}<br>
+        {{ site.contact.city }}, {{ site.contact.state }} {{ site.contact.zip }}<br>
+        <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a><br>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      </address>
+      <p class="site-footer__note">Office: {{ site.contact.officeHours }}</p>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__head">Church Services</h2>
+      <ul class="site-footer__list">
+        {% for s in site.church.services %}
+        <li><span>{{ s.name }}</span> <span>{{ s.time }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__head">Quick Links</h2>
+      <ul class="site-footer__list site-footer__list--plain">
+        <li><a href="/admissions/">Admissions</a></li>
+        <li><a href="/families/attendance/">Attendance</a></li>
+        <li><a href="/families/forms/">Forms &amp; Documents</a></li>
+        <li><a href="/families/calendar/">School Calendar</a></li>
+        <li><a href="/about/faculty/">Faculty &amp; Staff</a></li>
+        <li><a href="/student-life/dress-code/">Dress Code</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="wrap site-footer__legal">
+    <p>&copy; {% year %} Westside Baptist Academy. All rights reserved.</p>
+    <p>Westside Baptist Academy admits students of any race, color, national and ethnic origin to all the rights, privileges, programs, and activities generally accorded or made available to students at the school.</p>
+  </div>
+</footer>

@@ -1,0 +1,128 @@
+---
+layout: layouts/base.njk
+title: Schedule a Tour
+description: Visit Westside Baptist Academy during the school day. Tours take about an hour.
+permalink: /admissions/visit/
+---
+
+<div class="page-head">
+  <div class="wrap">
+    <span class="section__eyebrow">Admissions</span>
+    <h1>Schedule a Tour</h1>
+    <p class="page-head__lede">Come during a school day, while class is in session. That is when you learn what a school is actually like.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <div class="grid grid--2">
+
+      <div>
+        <h2>Request a visit</h2>
+        <p>Tell us a little about your family and we will call you back to set a time. Tours take about an hour and include time with the principal and a look at the classrooms your child would be in.</p>
+
+        <form class="form-grid" id="inquiry-form" method="post" action="/api/inquiry">
+          <div class="field">
+            <label for="parentName">Parent name</label>
+            <input type="text" id="parentName" name="parentName" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="field field--full">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="grades">Grade(s) of interest</label>
+            <input type="text" id="grades" name="grades" placeholder="e.g. 2nd and 6th">
+          </div>
+          <div class="field">
+            <label for="year">School year</label>
+            <select id="year" name="year">
+              <option>2026&ndash;2027</option>
+              <option>2027&ndash;2028</option>
+              <option>As soon as possible</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="currentSchool">Current school or situation</label>
+            <input type="text" id="currentSchool" name="currentSchool" placeholder="Public, private, homeschool, moving to the area…">
+          </div>
+          <div class="field field--full">
+            <label for="message">Anything you would like us to know</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <div class="field field--full" hidden aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field field--full">
+            <button class="btn" type="submit">Request a Tour</button>
+            <p class="field__hint" id="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Or simply call</h3>
+          <p>The fastest way to arrange a visit is to call the office during school hours and speak to the secretary.</p>
+          <p><a class="btn" href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a></p>
+          <p class="card__meta">{{ site.contact.officeHours }}</p>
+        </div>
+
+        <div class="card u-mt">
+          <h3>Find us</h3>
+          <address>
+            {{ site.contact.street }}<br>
+            {{ site.contact.city }}, {{ site.contact.state }} {{ site.contact.zip }}
+          </address>
+          <p><a href="https://maps.google.com/?q={{ site.contact.street | urlencode }},+{{ site.contact.city }},+{{ site.contact.state }}+{{ site.contact.zip }}">Open in Google Maps &rarr;</a></p>
+        </div>
+
+        <div class="card u-mt">
+          <h3>What to expect</h3>
+          <ul class="list-tight">
+            <li>About an hour, during the school day</li>
+            <li>Time with the principal</li>
+            <li>A look inside your child's would-be classroom</li>
+            <li>Straight answers about cost and about fit</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// Progressive enhancement: submit without a page reload, and keep the phone
+// number in front of the visitor if the API is not configured yet.
+document.getElementById("inquiry-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  var form = e.target;
+  var status = document.getElementById("form-status");
+  var button = form.querySelector("button[type=submit]");
+  var data = Object.fromEntries(new FormData(form).entries());
+
+  button.disabled = true;
+  status.textContent = "Sending…";
+
+  try {
+    var res = await fetch(form.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error("Request failed");
+    form.reset();
+    status.textContent = "Thank you — we received your request and will call you back shortly.";
+  } catch (err) {
+    status.innerHTML = 'We could not send that. Please call the office at <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a>.';
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
