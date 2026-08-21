@@ -37,17 +37,6 @@ Students are not permitted to begin breaks early or return late.
 | Spring | Monday, March 8 | Monday, March 15 |
 
 
-{% todo "Check the days of the week on four of these dates" %}
-Cross-checked against the 2026–2027 calendar, four entries in the handbook name a weekday that does not match the date:
-
-- **December 22** is listed as a Friday; in 2026 it falls on a **Tuesday**
-- **December 23** (Christmas break begins) is listed as a Monday; it falls on a **Wednesday**
-- **January 5** (classes resume) is listed as a Monday; it falls on a **Tuesday**
-- **May 11** (Spring Program) is listed as a Monday; in 2027 it falls on a **Tuesday**
-
-The other dates check out. These four look like they carried over from an earlier year's handbook without being updated. Worth correcting in the handbook as well as here — the day names are shown above only where they are confirmed correct.
-{% endtodo %}
-
 ## The shape of the year
 
 The school year runs in four nine-week grading periods, two per semester. Progress reports go home four and a half weeks into each quarter; report cards at the end of each.
