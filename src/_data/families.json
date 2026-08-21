@@ -1,0 +1,54 @@
+{
+  "lede": "The things you actually need on a Tuesday morning, in one place.",
+  "doors": [
+    {
+      "heading": "School Calendar",
+      "text": "Quarters, breaks, programs and the dates the school asks every family to hold.",
+      "linkText": "See the calendar",
+      "url": "/families/calendar/"
+    },
+    {
+      "heading": "Forms & Documents",
+      "text": "Handbook, applications, permission slips, book lists and supply lists.",
+      "linkText": "Download forms",
+      "url": "/families/forms/"
+    },
+    {
+      "heading": "Attendance",
+      "text": "Absences, tardies, half days, and what to do when your child is sick.",
+      "linkText": "Read the policy",
+      "url": "/families/attendance/"
+    },
+    {
+      "heading": "Homework",
+      "text": "What is expected each night, weekly folders, and how make-up work is handled.",
+      "linkText": "How homework works",
+      "url": "/families/homework/"
+    }
+  ],
+  "schoolDayNote": "The school cannot assume responsibility for students arriving before 7:35 AM",
+  "closureSteps": [
+    "Email and text through Schoolcast",
+    "The school Facebook page and this website",
+    "Your child's teacher",
+    "Mr. Horn, (832) 294-1921 — only after the first three"
+  ],
+  "cards": [
+    {
+      "heading": "Reports and conferences",
+      "body": "Weekly folders go home showing progress. Progress reports come four and a half weeks into each nine weeks; report cards at the end of each nine weeks. Both must be signed and returned the next day.\n\nThe parent–teacher conference after the first nine weeks is required for all parents — that is when the report card is picked up.\n\n[Grading and reporting →](/academics/grading/)"
+    },
+    {
+      "heading": "Talking to a teacher",
+      "body": "Schedule conferences through the office, in advance. Teachers cannot discuss concerns while classes are in session, while on parking lot duty, or at church service times.\n\n[Faculty & staff →](/about/faculty/)"
+    },
+    {
+      "heading": "Lunch",
+      "body": "Students bring their own lunches. If a student arrives without one, the school provides a lunch and charges it to the family account. Microwaves and refrigerators are not available to students.\n\nParents are welcome to eat lunch with their child and may bring outside food when they do."
+    },
+    {
+      "heading": "Dress code",
+      "body": "Uniform items come from the French Toast website, using the stock numbers posted by the school. Shirts are white, grey or burgundy.\n\n[Full dress code →](/student-life/dress-code/)"
+    }
+  ]
+}

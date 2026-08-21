@@ -1,0 +1,42 @@
+{
+  "lede": "Call during school hours and a person will answer.",
+  "visiting": {
+    "heading": "Visiting campus",
+    "text": "Westside Baptist Academy is a closed campus. All visitors sign in at the main office, entering through the main front doors, and wear a badge while on campus."
+  },
+  "whoToAsk": [
+    {
+      "topic": "Enrollment and tours",
+      "who": "School office"
+    },
+    {
+      "topic": "Tuition and billing",
+      "who": "School office"
+    },
+    {
+      "topic": "An assignment or a grade",
+      "who": "Your child's teacher"
+    },
+    {
+      "topic": "Attendance and absences",
+      "who": "School office"
+    },
+    {
+      "topic": "Discipline and policy",
+      "who": "Mr. Ray Horn, Principal"
+    },
+    {
+      "topic": "Church questions",
+      "who": "Westside Baptist Church"
+    }
+  ],
+  "employment": {
+    "heading": "Employment",
+    "text": "Westside Baptist Academy hires teachers who share the convictions of this ministry."
+  },
+  "servicesNote": "Visitors are welcome at any service.",
+  "extraService": {
+    "name": "Saturday Soul Winning",
+    "time": "9:30 AM"
+  }
+}

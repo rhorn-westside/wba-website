@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "eyebrow": "K5–12 · College Preparatory · Katy, Texas",
+    "heading": "An education built on the Word of God.",
+    "primaryButton": { "label": "Schedule a Tour", "url": "/admissions/visit/" },
+    "secondaryButton": { "label": "Admissions", "url": "/admissions/" }
+  },
+  "proof": [
+    { "figure": "2007", "label": "Serving Katy since" },
+    { "figure": "K5–12", "label": "Every grade, one campus" },
+    { "figure": "Small", "label": "Class sizes by design" },
+    { "figure": "Daily", "label": "Bible in every grade" }
+  ],
+  "anniversary": {
+    "show": true,
+    "eyebrow": "2007 – 2027",
+    "heading": "Twenty years of Westside Baptist Academy.",
+    "body": "This school year is the Academy's twentieth. Two decades of families who chose to have their children taught, corrected and prayed for by people who share their convictions — and of graduates who left here able to think clearly and give a reason for what they believe.\n\nWe are grateful, and we are still enrolling."
+  },
+  "doors": [
+    {
+      "heading": "New Families",
+      "text": "Learn what an education here looks like, what it costs, and how to apply. We enroll year-round as space allows.",
+      "linkText": "Start here",
+      "url": "/admissions/"
+    },
+    {
+      "heading": "Current Families",
+      "text": "Homework schedules, the school calendar, forms, supply lists and everything else you need during the week.",
+      "linkText": "Family resources",
+      "url": "/families/"
+    },
+    {
+      "heading": "What We Believe",
+      "text": "We are a ministry of Westside Baptist Church, and our convictions shape every classroom on this campus.",
+      "linkText": "Our position",
+      "url": "/about/beliefs/"
+    }
+  ],
+  "why": {
+    "eyebrow": "Why Westside Baptist Academy",
+    "heading": "A small school that knows your child by name.",
+    "lede": "Westside Baptist Academy opened in 2007 as a ministry of Westside Baptist Church. What has not changed since is the reason we exist: to come alongside Christian parents rather than replace them.",
+    "buttonLabel": "More about the Academy",
+    "buttonUrl": "/about/",
+    "marks": [
+      { "heading": "Christ-centered instruction", "text": "Scripture is not a subject added to the schedule. It is the framework every subject is taught inside of." },
+      { "heading": "Low student-to-teacher ratios", "text": "Teachers know each student's strengths, gaps and character — and so do their parents." },
+      { "heading": "Rigorous academics", "text": "A college-preparatory curriculum that graduates students ready for what comes next." },
+      { "heading": "Strong standardized testing", "text": "Annual achievement testing keeps our academics honest and measurable." },
+      { "heading": "Consistent character training", "text": "Expectations are clear, applied evenly, and reinforced by the same adults every day." },
+      { "heading": "Chapel each week", "text": "Corporate worship and preaching are a normal part of the school week." },
+      { "heading": "A full fine arts program", "text": "Choir, orchestra, ensembles and art — taught, not treated as an afterthought." },
+      { "heading": "Qualified, ministry-minded faculty", "text": "Our teachers are here because they believe in the work, not because it was the job available." }
+    ]
+  },
+  "goals": {
+    "eyebrow": "What we are aiming at",
+    "heading": "Our program is designed so that students will…",
+    "items": [
+      "Search the Scriptures daily.",
+      "Think, be independent, work and read.",
+      "Understand and know fundamental academics.",
+      "Develop mentally, physically, and spiritually.",
+      "Exercise biblical masculinity and femininity.",
+      "Nurture in and act upon Scriptural principles.",
+      "Treat one another with love, loyalty, honesty, and wisdom.",
+      "Share the Gospel in the community and show Christlikeness."
+    ],
+    "buttonLabel": "About the Academy",
+    "buttonUrl": "/about/"
+  },
+  "ministry": {
+    "eyebrow": "A ministry of Westside Baptist Church",
+    "heading": "The school and the church are not separate things.",
+    "text": "The Academy meets on the church campus, under the authority of the same pastor and the same doctrinal position. Families are not required to be members, but they should know clearly what we teach and why.",
+    "primaryButton": { "label": "What We Believe", "url": "/about/beliefs/" }
+  },
+  "callToAction": {
+    "heading": "Enrolling now for K5 through 12th grade",
+    "text": "Call the office, or schedule a tour and see the school on an ordinary day — that is when you learn the most.",
+    "buttonLabel": "Schedule a Tour",
+    "buttonUrl": "/admissions/visit/"
+  }
+}

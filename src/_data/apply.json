@@ -1,0 +1,47 @@
+{
+  "lede": "Students apply, or re-apply, each year. Here is the whole procedure.",
+  "steps": [
+    {
+      "heading": "Call the office",
+      "text": "Call %PHONE% and tell us the grade and the year you are asking about. We will tell you honestly whether there is room."
+    },
+    {
+      "heading": "Tour the school",
+      "text": "Come during a school day. You will meet the principal, see the classrooms your child would be in, and meet their teacher."
+    },
+    {
+      "heading": "Submit the application and records",
+      "text": "Complete the New Student Application along with the Parent Agreements, the Financial Information page, and the Church Affiliation Confirmation Form. All are on the [forms page](/families/forms/)."
+    },
+    {
+      "heading": "Assessment testing and interview",
+      "text": "All new students undergo assessment testing during enrollment; the cost is the parents' responsibility. A personal interview is required of every new student, and may be required of returning students."
+    },
+    {
+      "heading": "Orientation",
+      "text": "**Both parents are required** to attend the orientation meeting, held the Tuesday before the first day of school at 7:00 PM. At least one parent is required at any other meeting held during the year."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What you will need to provide",
+      "body": "### Report cards\n\nStudents entering 2nd through 12th grade must provide report cards from the last grade completed. For a transfer student, a partial year is acceptable. Homeschool students provide a record of academic grades and progress in the subjects completed in previous years.\n\n### Health records\n\nAll new students turn in an up-to-date health record. Returning students are advised when additional immunizations are required.\n\n### Personal testimony\n\nStudents in 4th through 12th grade must give evidence of having received Jesus Christ as their personal Savior, or be open to God's working in their spiritual life. Exceptions may be granted where one parent or guardian gives clear evidence of salvation and the student is not opposed to the Gospel. Students give testimony of their desire to attend Westside Baptist Academy and to maintain a good Christian testimony both on and off campus.\n\n### Parental Consent Form\n\n**Part I** is signed by parents, indicating willingness to cooperate with the school's policies on academic and character development. It gives permission for field trips, allows the school to forward records to other institutions or employers, and records the agreement to make tuition and fee payments on time.\n\n**Part II** is a medical form that travels with students to ball games and field trips, so a child can receive treatment in an emergency. **This form must be notarized** — and if your address, phone number, employer or insurance changes, a new one must be completed.\n\n### English\n\nAll students must have adequate use of the English language. Where there is a deficiency, there may be an additional requirement."
+    },
+    {
+      "heading": "Age and admission limits",
+      "body": "- K5 students must be **five years old by October 1**. Exceptions are considered case by case.\n- No new student is accepted over the age of **nineteen**.\n- Where the school considers itself unable to adequately meet a student's needs, enrollment or re-enrollment may be denied based on past behavior or performance."
+    },
+    {
+      "heading": "Church attendance",
+      "body": "One of the enrollment agreements is that parents as well as students are in faithful attendance at a Bible-preaching, doctrinally sound church. This requirement is not optional. Students return a signed church attendance slip each Monday.\n\n[More on what we ask of families →](/about/beliefs/)"
+    },
+    {
+      "heading": "Nondiscriminatory policy",
+      "body": "Westside Baptist Academy admits students of any race, color, national and ethnic origin to all the rights, privileges, programs, and activities accorded or made available to WBA students. We do not discriminate on the basis of sex, race, color, national or ethnic origin in the administration of our educational policies and procedures, athletic, or other school-administered programs. We do, however, reserve the right to deny admission to any individual whose personal or family lifestyle is not in harmony with the distinctively spiritual mission and stated philosophy of Westside Baptist Church and Academy."
+    },
+    {
+      "heading": "Keeping records current",
+      "body": "Notify the office immediately when anything changes, so school records stay accurate."
+    }
+  ]
+}
