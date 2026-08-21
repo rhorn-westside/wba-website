@@ -181,6 +181,214 @@ content:
       - { name: url, label: Website address (leave as it is), type: string }
 
   # -------------------------------------------------------------------
+  - name: homepage
+    label: "Homepage"
+    type: file
+    path: src/_data/home.json
+    description: "Everything on the front page. The school day table and the purpose sentence come from School Information."
+    fields:
+      - name: hero
+        label: "Top of the page"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the heading, type: string }
+          - { name: heading, label: Main heading, type: string }
+          - name: primaryButton
+            label: Red button
+            type: object
+            fields:
+              - { name: label, label: Button wording, type: string }
+              - { name: url, label: Web address, type: string }
+          - name: secondaryButton
+            label: White button
+            type: object
+            fields:
+              - { name: label, label: Button wording, type: string }
+              - { name: url, label: Web address, type: string }
+      - name: proof
+        label: "Four facts strip"
+        type: object
+        list: true
+        fields:
+          - { name: figure, label: Large red text, type: string }
+          - { name: label, label: Small caption, type: string }
+      - name: anniversary
+        label: "Anniversary band"
+        type: object
+        fields:
+          - { name: show, label: Show this section, type: boolean, description: "Turn off after the anniversary year ends." }
+          - { name: eyebrow, label: Small line above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Text, type: rich-text }
+      - name: doors
+        label: "Three panels"
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: linkText, label: Link wording, type: string }
+          - { name: url, label: Web address, type: string }
+      - name: why
+        label: "Why Westside section"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: lede, label: Opening paragraph, type: text }
+          - { name: buttonLabel, label: Button wording, type: string }
+          - { name: buttonUrl, label: Button web address, type: string }
+          - name: marks
+            label: Points
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Point, type: string }
+              - { name: text, label: Explanation, type: text }
+      - name: goals
+        label: "Program goals section"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: items, label: Goals, type: string, list: true }
+          - { name: buttonLabel, label: Button wording, type: string }
+          - { name: buttonUrl, label: Button web address, type: string }
+      - name: ministry
+        label: "Church section (dark band)"
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the heading, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - name: primaryButton
+            label: Red button
+            type: object
+            fields:
+              - { name: label, label: Button wording, type: string }
+              - { name: url, label: Web address, type: string }
+      - name: callToAction
+        label: "Red band at the bottom"
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: buttonLabel, label: Button wording, type: string }
+          - { name: buttonUrl, label: Button web address, type: string }
+
+  # -------------------------------------------------------------------
+  - name: familiespage
+    label: "Family Resources Page"
+    type: file
+    path: src/_data/families.json
+    description: "The Current Families landing page. School day times come from School Information."
+    fields:
+      - { name: lede, label: Intro line under the heading, type: string }
+      - name: doors
+        label: "Four panels"
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: linkText, label: Link wording, type: string }
+          - { name: url, label: Web address, type: string }
+      - { name: schoolDayNote, label: Note under the school day table, type: string }
+      - name: closureSteps
+        label: "If school closes — what to check, in order"
+        type: string
+        list: true
+      - name: cards
+        label: "Information cards"
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Text, type: rich-text }
+
+  # -------------------------------------------------------------------
+  - name: applypage
+    label: "How to Apply Page"
+    type: file
+    path: src/_data/apply.json
+    description: "The enrollment steps. Write %PHONE% or %EMAIL% anywhere and the school's real number or address is inserted automatically."
+    fields:
+      - { name: lede, label: Intro line under the heading, type: string }
+      - name: steps
+        label: "Numbered steps"
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Step heading, type: string }
+          - { name: text, label: Step text, type: rich-text }
+      - name: sections
+        label: "Sections below the steps"
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Section heading, type: string }
+          - { name: body, label: Section text, type: rich-text }
+
+  # -------------------------------------------------------------------
+  - name: contactpage
+    label: "Contact Page"
+    type: file
+    path: src/_data/contact.json
+    description: "Wording on the Contact page. Phone, address, hours and service times live under School Information."
+    fields:
+      - name: lede
+        label: Intro line under the heading
+        type: string
+      - name: whoToAsk
+        label: "Who to ask"
+        type: object
+        list: true
+        fields:
+          - name: topic
+            label: What it's about
+            type: string
+          - name: who
+            label: Who to contact
+            type: string
+      - name: employment
+        label: Employment
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: text
+            label: Text
+            type: text
+            description: The school's email address is added automatically at the end.
+      - name: visiting
+        label: "Visiting campus card"
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: text
+            label: Text
+            type: text
+      - name: servicesNote
+        label: Note under the service times
+        type: string
+      - name: extraService
+        label: Extra service time
+        type: object
+        description: An additional service shown after the ones in School Information. Clear the name to hide the row.
+        fields:
+          - name: name
+            label: Service
+            type: string
+            required: false
+          - name: time
+            label: Time
+            type: string
+            required: false
+
+  # -------------------------------------------------------------------
   - name: newpages
     label: "New Pages"
     type: collection

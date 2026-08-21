@@ -4,15 +4,18 @@ title: false
 description: Westside Baptist Academy is a K5–12 college-preparatory Christian school in Katy, Texas, and a ministry of Westside Baptist Church.
 ---
 
+{# Wording comes from src/_data/home.json so it can be edited in the CMS.
+   Phone, address, school day and service times come from site.json. #}
+
 <section class="hero">
   <div class="wrap">
     <div class="hero__inner">
-      <span class="hero__eyebrow">K5&ndash;12 &middot; College Preparatory &middot; Katy, Texas</span>
-      <h1>An education built on the Word of God.</h1>
+      <span class="hero__eyebrow">{{ home.hero.eyebrow }}</span>
+      <h1>{{ home.hero.heading }}</h1>
       <p class="hero__lede">{{ site.purpose }}</p>
       <div class="btn-row">
-        <a class="btn" href="/admissions/visit/">Schedule a Tour</a>
-        <a class="btn btn--light" href="/admissions/">Admissions</a>
+        <a class="btn" href="{{ home.hero.primaryButton.url }}">{{ home.hero.primaryButton.label }}</a>
+        <a class="btn btn--light" href="{{ home.hero.secondaryButton.url }}">{{ home.hero.secondaryButton.label }}</a>
       </div>
     </div>
   </div>
@@ -21,61 +24,40 @@ description: Westside Baptist Academy is a K5–12 college-preparatory Christian
 <section class="proof">
   <div class="wrap">
     <div class="proof__grid">
+      {% for tile in home.proof %}
       <div class="proof__item">
-        <span class="proof__num">{{ site.founded }}</span>
-        <span class="proof__label">Serving Katy since</span>
+        <span class="proof__num">{{ tile.figure }}</span>
+        <span class="proof__label">{{ tile.label }}</span>
       </div>
-      <div class="proof__item">
-        <span class="proof__num">K5&ndash;12</span>
-        <span class="proof__label">Every grade, one campus</span>
-      </div>
-      <div class="proof__item">
-        <span class="proof__num">Small</span>
-        <span class="proof__label">Class sizes by design</span>
-      </div>
-      <div class="proof__item">
-        <span class="proof__num">Daily</span>
-        <span class="proof__label">Bible in every grade</span>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
+{% if home.anniversary.show %}
 <section class="anniversary">
   <div class="wrap">
     <img class="anniversary__mark" src="{{ site.logoLarge }}"
          alt="Westside Warriors 20th Anniversary" width="554" height="640">
     <div>
-      <span class="section__eyebrow">2007 &ndash; 2027</span>
-      <h2>Twenty years of Westside Baptist Academy.</h2>
-      <p>This school year is the Academy's twentieth. Two decades of families who chose to have their children taught, corrected and prayed for by people who share their convictions &mdash; and of graduates who left here able to think clearly and give a reason for what they believe.</p>
-      <p>We are grateful, and we are still enrolling.</p>
+      <span class="section__eyebrow">{{ home.anniversary.eyebrow }}</span>
+      <h2>{{ home.anniversary.heading }}</h2>
+      {{ home.anniversary.body | markdown | safe }}
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="section">
   <div class="wrap">
     <div class="doors">
-
-      <a class="door" href="/admissions/">
-        <h3>New Families</h3>
-        <p>Learn what an education here looks like, what it costs, and how to apply. We enroll year-round as space allows.</p>
-        <span class="door__more">Start here</span>
+      {% for door in home.doors %}
+      <a class="door" href="{{ door.url }}">
+        <h3>{{ door.heading }}</h3>
+        <p>{{ door.text }}</p>
+        <span class="door__more">{{ door.linkText }}</span>
       </a>
-
-      <a class="door" href="/families/">
-        <h3>Current Families</h3>
-        <p>Homework schedules, the school calendar, forms, supply lists and everything else you need during the week.</p>
-        <span class="door__more">Family resources</span>
-      </a>
-
-      <a class="door" href="/about/beliefs/">
-        <h3>What We Believe</h3>
-        <p>We are a ministry of Westside Baptist Church, and our convictions shape every classroom on this campus.</p>
-        <span class="door__more">Our position</span>
-      </a>
-
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -83,24 +65,19 @@ description: Westside Baptist Academy is a K5–12 college-preparatory Christian
 <section class="section section--alt">
   <div class="wrap">
     <div class="section__head">
-      <span class="section__eyebrow">Why Westside Baptist Academy</span>
-      <h2>A small school that knows your child by name.</h2>
-      <p class="section__lede">Westside Baptist Academy opened in {{ site.founded }} as a ministry of {{ site.church.name }}. What has not changed since is the reason we exist: to come alongside Christian parents rather than replace them.</p>
+      <span class="section__eyebrow">{{ home.why.eyebrow }}</span>
+      <h2>{{ home.why.heading }}</h2>
+      <p class="section__lede">{{ home.why.lede }}</p>
     </div>
 
     <ul class="marks">
-      <li><strong>Christ-centered instruction</strong><span>Scripture is not a subject added to the schedule. It is the framework every subject is taught inside of.</span></li>
-      <li><strong>Low student-to-teacher ratios</strong><span>Teachers know each student's strengths, gaps and character &mdash; and so do their parents.</span></li>
-      <li><strong>Rigorous academics</strong><span>A college-preparatory curriculum that graduates students ready for what comes next.</span></li>
-      <li><strong>Strong standardized testing</strong><span>Annual achievement testing keeps our academics honest and measurable.</span></li>
-      <li><strong>Consistent character training</strong><span>Expectations are clear, applied evenly, and reinforced by the same adults every day.</span></li>
-      <li><strong>Chapel each week</strong><span>Corporate worship and preaching are a normal part of the school week.</span></li>
-      <li><strong>A full fine arts program</strong><span>Choir, orchestra, ensembles and art &mdash; taught, not treated as an afterthought.</span></li>
-      <li><strong>Qualified, ministry-minded faculty</strong><span>Our teachers are here because they believe in the work, not because it was the job available.</span></li>
+      {% for mark in home.why.marks %}
+      <li><strong>{{ mark.heading }}</strong><span>{{ mark.text }}</span></li>
+      {% endfor %}
     </ul>
 
     <div class="btn-row">
-      <a class="btn" href="/about/">More about the Academy</a>
+      <a class="btn" href="{{ home.why.buttonUrl }}">{{ home.why.buttonLabel }}</a>
     </div>
   </div>
 </section>
@@ -109,20 +86,15 @@ description: Westside Baptist Academy is a K5–12 college-preparatory Christian
   <div class="wrap">
     <div class="grid grid--2">
       <div>
-        <span class="section__eyebrow">What we are aiming at</span>
-        <h2>Our program is designed so that students will&hellip;</h2>
+        <span class="section__eyebrow">{{ home.goals.eyebrow }}</span>
+        <h2>{{ home.goals.heading }}</h2>
         <ul>
-          <li>Search the Scriptures daily.</li>
-          <li>Think, be independent, work and read.</li>
-          <li>Understand and know fundamental academics.</li>
-          <li>Develop mentally, physically, and spiritually.</li>
-          <li>Exercise biblical masculinity and femininity.</li>
-          <li>Nurture in and act upon Scriptural principles.</li>
-          <li>Treat one another with love, loyalty, honesty, and wisdom.</li>
-          <li>Share the Gospel in the community and show Christlikeness.</li>
+          {% for goal in home.goals.items %}
+          <li>{{ goal }}</li>
+          {% endfor %}
         </ul>
         <div class="btn-row">
-          <a class="btn btn--ghost" href="/about/">About the Academy</a>
+          <a class="btn btn--ghost" href="{{ home.goals.buttonUrl }}">{{ home.goals.buttonLabel }}</a>
         </div>
       </div>
       <div class="card">
@@ -145,11 +117,11 @@ description: Westside Baptist Academy is a K5–12 college-preparatory Christian
 
 <section class="section section--ink">
   <div class="wrap wrap--narrow u-center">
-    <span class="section__eyebrow">A ministry of Westside Baptist Church</span>
-    <h2>The school and the church are not separate things.</h2>
-    <p>The Academy meets on the church campus, under the authority of the same pastor and the same doctrinal position. Families are not required to be members, but they should know clearly what we teach and why.</p>
+    <span class="section__eyebrow">{{ home.ministry.eyebrow }}</span>
+    <h2>{{ home.ministry.heading }}</h2>
+    <p>{{ home.ministry.text }}</p>
     <div class="btn-row btn-row--center">
-      <a class="btn" href="/about/beliefs/">What We Believe</a>
+      <a class="btn" href="{{ home.ministry.primaryButton.url }}">{{ home.ministry.primaryButton.label }}</a>
       <a class="btn btn--light" href="{{ site.church.url }}">Visit the Church</a>
     </div>
   </div>
@@ -157,10 +129,10 @@ description: Westside Baptist Academy is a K5–12 college-preparatory Christian
 
 <section class="cta-band">
   <div class="wrap">
-    <h2>Enrolling now for K5 through 12th grade</h2>
-    <p>Call the office, or schedule a tour and see the school on an ordinary day &mdash; that is when you learn the most.</p>
+    <h2>{{ home.callToAction.heading }}</h2>
+    <p>{{ home.callToAction.text }}</p>
     <div class="btn-row">
-      <a class="btn btn--light" href="/admissions/visit/">Schedule a Tour</a>
+      <a class="btn btn--light" href="{{ home.callToAction.buttonUrl }}">{{ home.callToAction.buttonLabel }}</a>
       <a class="btn btn--light" href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a>
     </div>
   </div>

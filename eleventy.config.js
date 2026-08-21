@@ -1,7 +1,35 @@
+import MarkdownIt from "markdown-it";
+import { readFileSync } from "node:fs";
+
+const md = new MarkdownIt({ html: true, linkify: true, typographer: false });
+
+// Wording stored in data files can include %PHONE% and %EMAIL%. They are
+// replaced with the real, linked values from site.json at build time, so the
+// contact details still live in exactly one place.
+const siteData = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
+const tokens = (value) =>
+  String(value)
+    .replaceAll("%PHONE%", `[${siteData.contact.phone}](tel:${siteData.contact.phoneHref})`)
+    .replaceAll("%EMAIL%", `[${siteData.contact.email}](mailto:${siteData.contact.email})`);
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/files": "files" });
   eleventyConfig.addPassthroughCopy("staticwebapp.config.json");
+
+
+  // Renders a markdown string from a data file into HTML. Lets wording that
+  // lives in JSON (so the CMS can edit it) still support bold, links and lists.
+  eleventyConfig.addFilter("markdown", (value) => {
+    if (!value) return "";
+    return md.render(tokens(value));
+  });
+
+  // Same, but without the wrapping <p> — for single lines.
+  eleventyConfig.addFilter("markdownInline", (value) => {
+    if (!value) return "";
+    return md.renderInline(tokens(value));
+  });
 
   eleventyConfig.addWatchTarget("src/assets/css/");
 

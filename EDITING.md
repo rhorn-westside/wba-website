@@ -26,7 +26,11 @@ Down the left-hand side you'll see these.
 | **Forms & Documents** | Uploading PDFs — book lists, supply lists, applications |
 | **Faculty & Staff** | Adding, removing or updating staff |
 | **School Information** | Phone, address, office hours, service times |
-| **Pages** | The wording on any page of the site |
+| **Pages** | The wording on most pages of the site |
+| **Contact Page** | Who to ask, employment, and the Contact page wording |
+| **Homepage** | Everything on the front page |
+| **Family Resources Page** | The Current Families landing page |
+| **How to Apply Page** | The enrollment steps |
 | **New Pages** | Creating a page that doesn't exist yet |
 | **Navigation Menu** | What appears in the menu across the top |
 
@@ -117,6 +121,26 @@ Drag entries to reorder them. Removing something from the menu does not delete t
 **School Information** → **Contact details & service times**. One change here updates every page at once.
 
 The phone number appears twice on purpose: once as people read it, once as digits so it can be tapped on a phone. Change both.
+
+---
+
+## What is not editable here
+
+Two pages are not in the editor: **Schedule a Tour** (it is mostly a form) and the wording around the **Forms & Documents** and **Faculty & Staff** pages — though the documents and the people on those pages are both fully editable.
+
+If something on one of those needs changing, ask whoever looks after the site technically.
+
+**A shortcut worth knowing:** on the Homepage, Family Resources, How to Apply and Contact pages, you can type `%PHONE%` or `%EMAIL%` anywhere in the text and the school's real phone number or email address appears there as a working link. That way, if the number ever changes, it only has to be changed once — under School Information.
+
+---
+
+## If you don't see your change
+
+Give it two minutes, then **hard refresh**: hold ⌘ and ⇧ and press R. Your browser keeps a copy of pages it has already loaded, and will happily keep showing you the old one.
+
+If a hard refresh doesn't do it, open the page in a private window. That never uses the stored copy, so what you see there is genuinely what everyone else sees.
+
+Nine times out of ten this is the explanation, not a broken save.
 
 ---
 
