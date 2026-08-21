@@ -3,7 +3,11 @@
   "trailingSlash": "always",
   "navigationFallback": {
     "rewrite": "/404.html",
-    "exclude": ["/assets/*", "/files/*", "*.{png,jpg,jpeg,svg,webp,ico,pdf,css,js,xml,txt}"]
+    "exclude": [
+      "/assets/*",
+      "/files/*",
+      "*.{png,jpg,jpeg,svg,webp,ico,pdf,css,js,xml,txt}"
+    ]
   },
   "responseOverrides": {
     "404": {
@@ -14,8 +18,12 @@
   "routes": [
     {
       "route": "/api/inquiry",
-      "methods": ["POST"],
-      "allowedRoles": ["anonymous"]
+      "methods": [
+        "POST"
+      ],
+      "allowedRoles": [
+        "anonymous"
+      ]
     },
     {
       "route": "/wba/*",

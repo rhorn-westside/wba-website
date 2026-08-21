@@ -1,0 +1,568 @@
+# Pages CMS configuration for the Westside Baptist Academy website.
+# https://pagescms.org/docs
+#
+# This decides what an editor sees. Labels are written for someone who has
+# never opened a source file. Fields marked "leave as it is" are structural —
+# they are shown only so that saving a page does not discard them.
+
+media:
+  input: src/files
+  output: /files
+  categories: [document, image]
+
+settings:
+  content:
+    merge: false
+
+content:
+  # -------------------------------------------------------------------
+  - name: closings
+    label: "School Closings"
+    type: file
+    path: src/_data/alert.json
+    description: "The red banner across the top of every page. Use it when school is closed."
+    fields:
+      - name: active
+        label: Show the banner
+        type: boolean
+        default: false
+        description: Turn on to close school. Turn off to take the banner down.
+      - name: title
+        label: Headline
+        type: string
+        description: Short and plain, e.g. School is closed today.
+      - name: message
+        label: Message
+        type: text
+        description: "Two sentences at most: what is closed, which day, and when it reopens."
+      - name: expires
+        label: Take down automatically after
+        type: date
+        options:
+          format: yyyy-MM-dd'T'HH:mm:ssXXX
+          time: true
+        required: false
+        description: Optional but recommended. The banner hides itself once this time passes, so it never gets left up.
+      - name: _howToUse
+        label: Notes for staff
+        type: string
+        list: true
+        required: false
+
+  # -------------------------------------------------------------------
+  - name: documents
+    label: "Forms & Documents"
+    type: file
+    path: src/_data/forms.json
+    description: "Everything on the Forms & Documents page. Upload a PDF and it appears there."
+    fields:
+      - name: groups
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - name: group
+            label: Section heading
+            type: string
+          - name: intro
+            label: Note under the heading
+            type: string
+            required: false
+          - name: columns
+            label: Show as columns
+            type: boolean
+            required: false
+            description: Use for long lists, like the grade-by-grade book lists.
+          - name: items
+            label: Documents
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Document name
+                type: string
+              - name: file
+                label: PDF file
+                type: file
+                required: false
+                options:
+                  media: true
+                description: Leave empty and the document shows as "Coming soon" to parents.
+              - name: note
+                label: Short note
+                type: string
+                required: false
+                description: Small grey type on the right, e.g. K5 through 5th grade.
+
+  # -------------------------------------------------------------------
+  - name: staff
+    label: "Faculty & Staff"
+    type: file
+    path: src/_data/faculty.json
+    fields:
+      - name: people
+        label: People
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+            description: Include the title, e.g. Mrs. Jennifer Cabrera.
+          - name: role
+            label: Role
+            type: string
+          - name: group
+            label: Section of the page
+            type: select
+            options:
+              values: ["Administration", "Elementary", "Junior & Senior High", "Fine Arts"]
+          - name: bio
+            label: Short bio
+            type: text
+            required: false
+            description: Two or three sentences. Optional.
+
+  # -------------------------------------------------------------------
+  - name: settings
+    label: "School Information"
+    type: file
+    path: src/_data/site.json
+    description: Changing anything here updates every page at once.
+    fields:
+      - name: contact
+        label: School contact
+        type: object
+        fields:
+          - { name: street, label: Street, type: string }
+          - { name: city, label: City, type: string }
+          - { name: state, label: State, type: string }
+          - { name: zip, label: ZIP, type: string }
+          - { name: phone, label: Phone (as displayed), type: string }
+          - name: phoneHref
+            label: Phone (for tapping on a mobile)
+            type: string
+            description: Digits only with country code, e.g. +12814923448
+          - { name: email, label: Email, type: string }
+          - { name: officeHours, label: Office hours, type: string }
+      - name: schoolDay
+        label: School day
+        type: object
+        fields:
+          - { name: start, label: School begins, type: string }
+          - { name: elementaryEnd, label: Elementary dismissal, type: string }
+          - { name: secondaryEnd, label: Secondary dismissal, type: string }
+      - name: church
+        label: Church
+        type: object
+        fields:
+          - { name: name, label: Church name, type: string }
+          - { name: url, label: Church website, type: string }
+          - { name: pastor, label: Pastor, type: string }
+          - name: services
+            label: Service times
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Service, type: string }
+              - { name: time, label: Time, type: string }
+      - name: purpose
+        label: Purpose statement
+        type: text
+        description: Used on the homepage and in search results.
+      - { name: tagline, label: Tagline, type: string }
+      - { name: name, label: School name (leave as it is), type: string }
+      - { name: shortName, label: Short name (leave as it is), type: string }
+      - { name: founded, label: Year founded (leave as it is), type: number }
+      - { name: grades, label: Grades served (leave as it is), type: string }
+      - { name: mascot, label: Mascot (leave as it is), type: string }
+      - { name: logo, label: Header logo file (leave as it is), type: string }
+      - { name: logoLarge, label: Large logo file (leave as it is), type: string }
+      - { name: url, label: Website address (leave as it is), type: string }
+
+  # -------------------------------------------------------------------
+  # Pages — the wording of each page of the site.
+  - name: about
+    label: "About the Academy"
+    type: file
+    path: src/about/index.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+  - name: beliefs
+    label: "What We Believe"
+    type: file
+    path: src/about/beliefs.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: church
+    label: "Our Church"
+    type: file
+    path: src/about/church.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: academics
+    label: "Academics (overview)"
+    type: file
+    path: src/academics/index.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: elementary
+    label: "Elementary"
+    type: file
+    path: src/academics/elementary.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: secondary
+    label: "Junior & Senior High"
+    type: file
+    path: src/academics/secondary.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: grading
+    label: "Grading & Reporting"
+    type: file
+    path: src/academics/grading.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: studentlife
+    label: "Student Life"
+    type: file
+    path: src/student-life.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: dresscode
+    label: "Dress Code"
+    type: file
+    path: src/student-life/dress-code.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: conduct
+    label: "Standard of Conduct"
+    type: file
+    path: src/student-life/conduct.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: admissions
+    label: "Why Westside Baptist Academy"
+    type: file
+    path: src/admissions/index.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: tuition
+    label: "Tuition & Fees"
+    type: file
+    path: src/admissions/tuition.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: calendar
+    label: "School Calendar"
+    type: file
+    path: src/families/calendar.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+      - name: hideCta
+        label: Hide the tour banner (leave as it is)
+        type: boolean
+  - name: attendance
+    label: "Attendance"
+    type: file
+    path: src/families/attendance.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: homework
+    label: "Homework"
+    type: file
+    path: src/families/homework.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string
+  - name: give
+    label: "Give to the Academy"
+    type: file
+    path: src/give.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: lede
+        label: Intro line under the title
+        type: text
+        description: One sentence, shown in larger grey type at the top of the page.
+      - name: body
+        label: Page content
+        type: rich-text
+      - name: eyebrow
+        label: Section label (leave as it is)
+        type: string
+      - name: layout
+        label: Layout (leave as it is)
+        type: string
+      - name: permalink
+        label: Web address (leave as it is)
+        type: string

@@ -16,7 +16,7 @@ Westside Baptist Academy exists to help Christian parents train their children. 
 
 ## You are choosing to be known
 
-The Academy is a small school and intends to stay one. Every teacher knows every student's name. There is nowhere to hide here — which is uncomfortable for a student coasting, and a relief for a student who was invisible somewhere larger.
+The Academy is a small school. Every teacher knows every student's name. There is nowhere to hide here — which is uncomfortable for a student coasting, and a relief for a student who was invisible somewhere larger.
 
 The trade-off is honest: a school this size offers fewer course sections, fewer sports, and fewer specialized programs than a large school does. Families who want the widest possible menu will find it elsewhere. Families who want their child known by adults who share their convictions find it here.
 

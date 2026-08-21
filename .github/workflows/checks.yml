@@ -1,0 +1,38 @@
+name: Site checks
+
+# Runs on every change. A broken link or malformed page fails here, before it
+# reaches the live site. A failed deploy leaves the previous version serving,
+# so this is a warning system rather than a safety net — but it means nobody
+# has to notice the problem by clicking around the live site.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    name: Links and markup
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check every internal link resolves
+        run: node scripts/check-links.mjs
+
+      - name: Validate HTML
+        run: npx --yes html-validate "_site/**/*.html"
+
+      - name: Check the CMS config still matches the content
+        run: node scripts/check-cms-config.mjs

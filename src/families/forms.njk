@@ -17,7 +17,7 @@ permalink: /families/forms/
   <div class="wrap">
     <div class="prose prose--wide">
 
-      {% for group in forms %}
+      {% for group in forms.groups %}
       <h2>{{ group.group }}</h2>
       {% if group.intro %}<p>{{ group.intro }}</p>{% endif %}
       <ul class="filelist{% if group.columns %} filelist--columns{% endif %}">

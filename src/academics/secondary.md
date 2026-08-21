@@ -1,8 +1,8 @@
 ---
 layout: layouts/page.njk
 eyebrow: Academics
-title: Junior & Senior High — 6th through 12th Grade
-lede: A departmentalized, college-preparatory program with teachers who still know every student's name.
+title: Junior & Senior High
+lede: A departmentalized, college-preparatory program for grades 6 through 12, with teachers who still know every student's name.
 permalink: /academics/secondary/
 ---
 

@@ -18,7 +18,7 @@ permalink: /about/faculty/
 
     {% set groups = ["Administration", "Elementary", "Junior & Senior High", "Fine Arts"] %}
     {% for group in groups %}
-      {% set members = faculty | where("group", group) %}
+      {% set members = faculty.people | where("group", group) %}
       {% if members.length %}
       <div class="faculty-group">
         <h2>{{ group }}</h2>
