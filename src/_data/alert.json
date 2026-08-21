@@ -1,8 +1,8 @@
 {
-  "active": false,
+  "active": true,
   "title": "School is closed today",
   "message": "Westside Baptist Academy is closed Tuesday, January 20 due to weather. Classes resume Wednesday. Watch for a Schoolcast message if anything changes.",
-  "expires": "",
+  "expires": "2026-08-20T21:15:00Z",
   "_howToUse": [
     "To switch the banner ON: set active to true, edit title and message, set expires, commit.",
     "To switch it OFF: set active back to false, commit.",
