@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 eyebrow: About
 title: Our Church
-lede: Westside Baptist Academy is a ministry of Westside Baptist Church — an independent, fundamental, Bible-believing, soul-winning church in Katy, Texas.
+lede: Westside Baptist Academy is a ministry of Westside Baptist Church — an Independent Fundamental, Bible-believing, soul-winning church in Katy, Texas.
 permalink: /about/church/
 ---
 
