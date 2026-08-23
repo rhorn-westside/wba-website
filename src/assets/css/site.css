@@ -52,7 +52,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 1.0625rem;
+  font-size: var(--base-size, 1.0625rem);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -60,7 +60,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 {
-  font-family: var(--serif);
+  font-family: var(--heading-font, var(--serif));
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;

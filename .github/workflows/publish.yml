@@ -71,6 +71,10 @@ jobs:
         if: env.nothing_to_do != 'true'
         run: node scripts/check-cms-config.mjs
 
+      - name: Check the Look & Feel colours are readable
+        if: env.nothing_to_do != 'true'
+        run: node scripts/check-contrast.mjs
+
       - name: Push the merge to main
         if: env.nothing_to_do != 'true'
         run: git push origin main

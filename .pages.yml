@@ -124,6 +124,77 @@ content:
             description: Two or three sentences. Optional.
 
   # -------------------------------------------------------------------
+  - name: theme
+    label: "Look & Feel"
+    type: file
+    path: src/_data/theme.json
+    description: "Colours, fonts and sizes for the whole site. Change something, look at the preview, and publish it only if you like it."
+    fields:
+      - name: brandColor
+        label: Brand colour
+        type: string
+        options:
+          format: color
+        description: "The school red. Used for buttons, links, the footer and the closure banner. The darker shade for hovers and the pale wash behind callouts are worked out from this automatically."
+      - name: textColor
+        label: Text colour
+        type: string
+        options:
+          format: color
+        description: "Nearly black reads better than pure black. Softer greys for captions are worked out from this."
+      - name: pageColor
+        label: Page background
+        type: string
+        options:
+          format: color
+        description: "The colour behind everything. A warm off-white is easier on the eye than pure white."
+      - name: fontPairing
+        label: Fonts
+        type: select
+        options:
+          values:
+            - { value: classic, label: "Classic — Palatino headings, plain body" }
+            - { value: traditional, label: "Traditional — Georgia headings, Helvetica body" }
+            - { value: modern, label: "Modern — Charter headings, plain body" }
+            - { value: plain, label: "Plain — no serif anywhere" }
+        description: "These all use fonts already on people's computers, so nothing has to load and the page never flashes as it changes."
+      - name: headingFont
+        label: Headings
+        type: select
+        options:
+          values:
+            - { value: serif, label: "Serif — the traditional look" }
+            - { value: sans, label: "Plain — a more modern look" }
+      - name: textSize
+        label: Text size
+        type: select
+        options:
+          values:
+            - { value: small, label: Small }
+            - { value: normal, label: Normal }
+            - { value: large, label: Large }
+            - { value: larger, label: "Extra large" }
+        description: "Everything scales together. Worth nudging up if parents tell you the site is hard to read."
+      - name: corners
+        label: Corners
+        type: select
+        options:
+          values:
+            - { value: square, label: "Square" }
+            - { value: slight, label: "Slightly rounded" }
+            - { value: rounded, label: "Rounded" }
+        description: On buttons, cards and photos.
+      - name: contentWidth
+        label: Content width
+        type: select
+        options:
+          values:
+            - { value: narrow, label: "Narrow" }
+            - { value: standard, label: "Standard" }
+            - { value: wide, label: "Wide" }
+        description: How far text stretches across a large screen.
+
+  # -------------------------------------------------------------------
   - name: settings
     label: "School Information"
     type: file

@@ -36,3 +36,6 @@ jobs:
 
       - name: Check the CMS config still matches the content
         run: node scripts/check-cms-config.mjs
+
+      - name: Check the Look & Feel colours are readable
+        run: node scripts/check-contrast.mjs

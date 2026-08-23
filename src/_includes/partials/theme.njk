@@ -1,0 +1,5 @@
+{# Look & Feel settings, turned into CSS variables. Inlined rather than
+   linked so there is no extra request and no chance of a stale cached copy
+   after someone changes a colour. It comes after the stylesheet link in the
+   head, so these values win over the defaults baked into site.css. #}
+<style>{{ themeCss | safe }}</style>

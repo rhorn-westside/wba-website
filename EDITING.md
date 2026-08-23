@@ -41,6 +41,7 @@ Down the left-hand side you'll see these.
 | **School Closings** | The red banner that appears when school is closed |
 | **Forms & Documents** | Uploading PDFs — book lists, supply lists, applications |
 | **Faculty & Staff** | Adding, removing or updating staff |
+| **Look & Feel** | Colours, fonts and text size for the whole site |
 | **School Information** | Phone, address, office hours, service times |
 | **Pages** | The wording on most pages of the site |
 | **Contact Page** | Who to ask, employment, and the Contact page wording |
@@ -145,6 +146,22 @@ Your page is now live, but nothing links to it yet. Its web address is `/pages/`
 Drag entries to reorder them. Removing something from the menu does not delete the page — it just stops linking to it.
 
 **A word of advice.** A menu with seven items is easy to scan; one with twelve is not. Before adding a top-level item, consider whether the page belongs as a drop-down under one that already exists.
+
+---
+
+## Changing colours, fonts or text size
+
+**Look & Feel** → **Look & Feel**. It changes the whole site at once.
+
+You pick three colours — the brand red, the text colour, and the page background. Everything else is worked out from those: the darker red for buttons you're hovering over, the pale wash behind callouts, the softer grey for captions, the hairlines between sections. That's deliberate. Picking nine colours by hand is how a site ends up looking like nine different sites.
+
+Below the colours are fonts, text size, corner rounding and content width. The font choices all use typefaces already on people's computers, so nothing has to load and the page never flickers as it changes.
+
+**This is the section most worth previewing before you publish.** A wording change is easy to picture in your head; a colour change is not. Save, look at the preview, and only then publish.
+
+**If the colours are too hard to read, publishing will refuse.** You'll get a red cross with a message naming exactly which combination is the problem and what to do about it — usually darkening the text or lightening the background. The live site is left untouched. This only catches genuinely unreadable text, not merely ugly text: nothing stops you making the site orange.
+
+To get back to where you started: brand `#C30D11`, text `#1F1F1F`, page `#FBF9F6`, Classic fonts, serif headings, Normal size, Slightly rounded, Standard width.
 
 ---
 

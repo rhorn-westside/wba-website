@@ -67,6 +67,33 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Say so at build time when the Look & Feel colours are hard to read. The
+  // preview build still goes ahead — seeing the problem explains it far better
+  // than a refusal does — but check-contrast.mjs stops it reaching the live
+  // site.
+  eleventyConfig.on("eleventy.before", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { buildTheme } = await import("./scripts/theme.mjs");
+    try {
+      const theme = JSON.parse(await readFile("src/_data/theme.json", "utf8"));
+      const bad = buildTheme(theme).checks.filter((c) => c.ratio < c.min);
+      if (bad.length) {
+        console.warn(
+          "\n" +
+            "*".repeat(72) + "\n" +
+            "[theme] THESE COLOURS ARE TOO HARD TO READ AND CANNOT BE PUBLISHED.\n" +
+            bad
+              .map((c) => `        ${c.label} — ${c.ratio.toFixed(2)}:1, needs 4.5:1`)
+              .join("\n") +
+            "\n" +
+            "*".repeat(72) + "\n"
+        );
+      }
+    } catch {
+      /* no theme file — site.css defaults apply and the site builds fine */
+    }
+  });
+
   // Nunjucks' selectattr is unreliable across versions; this is explicit.
   eleventyConfig.addFilter("where", (arr, key, value) =>
     (arr || []).filter((item) => item[key] === value)

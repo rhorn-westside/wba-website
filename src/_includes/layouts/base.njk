@@ -7,6 +7,7 @@
 <meta name="description" content="{{ description or site.purpose }}">
 {% if env.preview %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="stylesheet" href="/assets/css/site.css">
+{% include "partials/theme.njk" %}
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="{{ title or site.name }}">
 <meta property="og:description" content="{{ description or site.purpose }}">

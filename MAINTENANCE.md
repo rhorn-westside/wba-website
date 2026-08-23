@@ -50,6 +50,18 @@ A push made with `GITHUB_TOKEN` does not trigger other workflows. If `publish.ym
 
 `publish.yml` builds and validates the merge result *before* `git push origin main`. A change that breaks a link fails the workflow with the live site untouched, rather than half-published.
 
+### Look & Feel (the theme system)
+
+`src/_data/theme.json` holds eight settings. `scripts/theme.mjs` expands them into the full set of CSS custom properties — deriving `--red-dark`, `--red-tint`, `--ink-soft`, `--ink-faint`, `--paper-alt`, `--rule` and `--white` from the three chosen colours — and `src/_data/themeCss.js` renders that block into every page's `<head>`, after the stylesheet link so it overrides the defaults still declared in `site.css`.
+
+Those defaults are the fallback: delete `theme.json` and the site builds unchanged.
+
+`scripts/theme.mjs` detects a dark page background and inverts the derivation direction, so a dark scheme lightens its supporting tones instead of darkening them into invisibility.
+
+`scripts/check-contrast.mjs` enforces 4.5:1 on three pairings and runs in both `checks.yml` and `publish.yml`. The Eleventy build only *warns* — deliberately, so a bad scheme still renders on the preview where the office can see what they did, while remaining unpublishable.
+
+To add a control: add the key to `theme.json`, handle it in `buildTheme()`, declare it in `.pages.yml` under `Look & Feel`, and make sure the CSS consumes the variable with a sensible fallback (`var(--base-size, 1.0625rem)`). `check-cms-config.mjs` will fail the build if the config and the file disagree.
+
 ### Turning the preview scheme off
 
 Delete `publish.yml`, drop `drafts` from the `push` trigger in `azure-static-web-apps.yml`, delete the `drafts` branch, and point the office's Pages CMS bookmark back at `main`. The `env.preview` flag then evaluates false everywhere and the ribbon never renders. Nothing else depends on it.
