@@ -27,14 +27,32 @@ There is **no database, no server-side code, no admin login on the server, and n
 
 ---
 
-## How a change reaches the live site
+## Branches, and how a change reaches the live site
 
-1. Someone edits a file — through Pages CMS, through GitHub's web editor, or locally
-2. The change is committed to `main`
-3. GitHub Actions runs `npm ci`, then `npm run build` (Eleventy compiles `src/` into `_site/`)
-4. The Azure action uploads `_site/`
+There are two long-lived branches.
+
+| Branch | Builds to | Who pushes to it |
+|---|---|---|
+| `main` | the live site | you, for code; the Publish workflow, for content |
+| `drafts` | a private preview environment | the office, via Pages CMS |
+
+**Content path.** The office edits `drafts` in Pages CMS. Each save triggers `azure-static-web-apps.yml`, which builds with `SITE_ENV=preview` and deploys to the Azure named environment `preview`. That build carries a ribbon on every page and a `noindex` meta tag. When the office runs the **Publish to the live site** workflow, it merges `drafts` into `main`, builds, runs the link and CMS-config checks, pushes `main`, deploys to production, and fast-forwards `drafts` back to `main`.
+
+**Code path.** You push to `main` directly. It deploys, and a final step fast-forwards `drafts` so the office previews against current templates. If `drafts` has unpublished content edits that push cannot fast-forward, the step logs a message and moves on — the next Publish merges the two properly.
 
 Two to three minutes end to end. Watch it under the repo's **Actions** tab.
+
+### Why Publish deploys instead of just merging
+
+A push made with `GITHUB_TOKEN` does not trigger other workflows. If `publish.yml` only merged and pushed, the ordinary deploy would never fire and the button would look broken. So it does the production deploy itself.
+
+### Why the checks run before the push
+
+`publish.yml` builds and validates the merge result *before* `git push origin main`. A change that breaks a link fails the workflow with the live site untouched, rather than half-published.
+
+### Turning the preview scheme off
+
+Delete `publish.yml`, drop `drafts` from the `push` trigger in `azure-static-web-apps.yml`, delete the `drafts` branch, and point the office's Pages CMS bookmark back at `main`. The `env.preview` flag then evaluates false everywhere and the ribbon never renders. Nothing else depends on it.
 
 ---
 

@@ -1,15 +1,27 @@
 name: Deploy to Azure Static Web Apps
 
+# Two destinations, decided by which branch was pushed.
+#
+#   main    -> the live website that parents see
+#   drafts  -> a private preview copy at its own address
+#
+# The office edits the `drafts` branch in Pages CMS. Nothing they save can
+# reach parents until somebody runs the "Publish to the live site" workflow.
+
 on:
   push:
-    branches: [main]
+    branches: [main, drafts]
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build_and_deploy:
@@ -32,6 +44,11 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          # Puts the "Preview copy — parents cannot see this" ribbon on every
+          # page of the drafts build, and marks it noindex so it never turns
+          # up in a search result.
+          SITE_ENV: ${{ github.ref == 'refs/heads/drafts' && 'preview' || 'production' }}
 
       - name: Deploy
         id: deploy
@@ -51,6 +68,20 @@ jobs:
           # set api_location to "api" below, add the five app settings in the
           # Azure portal, and push.
           api_location: ""
+          # Anything that is not main is a preview environment, never the
+          # live site. This is the line that makes the whole scheme safe.
+          production_branch: main
+          deployment_environment: ${{ github.ref == 'refs/heads/drafts' && 'preview' || '' }}
+
+      - name: Keep the drafts branch level with the live site
+        # After a code change lands on main, roll it into drafts so the office
+        # is previewing against current templates. If drafts has unpublished
+        # edits of its own this cannot fast-forward — that is fine, and the
+        # Publish workflow will merge the two properly when the time comes.
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git push origin HEAD:drafts \
+            || echo "drafts has unpublished edits — leaving it alone."
 
   close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

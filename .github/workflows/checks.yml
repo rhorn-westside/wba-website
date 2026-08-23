@@ -7,7 +7,7 @@ name: Site checks
 
 on:
   push:
-    branches: [main]
+    branches: [main, drafts]
   pull_request:
     branches: [main]
 

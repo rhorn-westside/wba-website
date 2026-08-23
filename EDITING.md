@@ -2,17 +2,33 @@
 
 Everything on this page can be done from a web browser. You do not need to install anything, and you cannot break the site by editing text — every change is saved with a history, and anything can be undone.
 
-**Go to:** [app.pagescms.org](https://app.pagescms.org)
+---
+
+## How it works: edit, look, publish
+
+Nothing you type goes straight onto the real website. There are three steps, and three bookmarks.
+
+| | Bookmark | What it's for |
+|---|---|---|
+| 1 | **Editor** | Where you type. Changes save to a draft. |
+| 2 | **Preview** | A private copy of the site showing your drafts. Parents cannot see it. |
+| 3 | **Publish** | The button that puts your drafts onto the real website. |
+
+So the rhythm is: **make your change → look at the preview → press Publish.**
+
+Every page of the preview site has a dark ribbon across the top reading *"Preview copy — parents cannot see this."* If you see that ribbon, you are looking at the draft. If you don't, you are looking at the real website.
+
+> **The mistake everyone makes once.** You edit, you save, you check the real website, and nothing has changed — so you edit it again. Save is not publish. Your work is fine; it's sitting in the draft waiting. Press Publish.
 
 ---
 
 ## Signing in
 
-Sign in with your GitHub account, then choose the **wba-website** repository.
+All three bookmarks use your GitHub account. Sign in once and the browser remembers you.
 
 If you don't have a GitHub account, the principal can set one up for you and give you access. It's free and takes a minute. You only ever use it to sign in here.
 
-Bookmark the page once you're in.
+**Getting the three bookmarks the first time.** Ask the principal — he has them written down. The editor bookmark in particular has to point at the **drafts** branch, and getting there by hand is fiddly. If you ever land in the editor and are unsure, look at the top of the screen: it should say **drafts**, not *main*. If it says *main*, you are editing the live site directly — back out and use the bookmark.
 
 ---
 
@@ -34,7 +50,19 @@ Down the left-hand side you'll see these.
 | **New Pages** | Creating a page that doesn't exist yet |
 | **Navigation Menu** | What appears in the menu across the top |
 
-Changes go live about two minutes after you press **Save**. Refresh the website to see them.
+Your change reaches the **preview** site about two minutes after you press **Save**. It reaches the real website about two minutes after you press **Publish**.
+
+---
+
+## Publishing
+
+1. Open the **Publish** bookmark
+2. Press **Run workflow**, then the green **Run workflow** button that appears
+3. Wait about two minutes
+
+That's it. A green tick means it's live; a red cross means something was wrong and the real website was left exactly as it was — nothing half-published, nothing broken. If you get a red cross, tell whoever looks after the site technically and carry on; your draft is safe.
+
+Publish as often or as rarely as you like. You can make six changes across a morning and publish them all with one press.
 
 ---
 
@@ -45,6 +73,10 @@ Changes go live about two minutes after you press **Save**. Refresh the website 
 3. Write the headline and message — say what is closed, which day, and when it reopens
 4. Set **Take down automatically after** to the morning school reopens
 5. **Save**
+
+6. Open the **Publish** bookmark and press **Run workflow**
+
+**A closure banner is the one thing worth publishing straight away** — check the preview if you want, but don't leave it sitting in draft while parents are wondering about tomorrow.
 
 The banner appears across the top of every page. Setting the take-down time matters: it means the notice disappears by itself, so a Monday closure isn't still showing on Thursday.
 
@@ -136,7 +168,9 @@ If something on one of those needs changing, ask whoever looks after the site te
 
 ## If you don't see your change
 
-Give it two minutes, then **hard refresh**: hold ⌘ and ⇧ and press R. Your browser keeps a copy of pages it has already loaded, and will happily keep showing you the old one.
+**First: are you looking at the right site, and did you publish?** Nine times out of ten the answer is one of those two. The preview site has a dark ribbon at the top; the real one doesn't. And a change only reaches the real site after you press Publish.
+
+If both of those are right, give it two minutes, then **hard refresh**: hold ⌘ and ⇧ and press R. Your browser keeps a copy of pages it has already loaded, and will happily keep showing you the old one.
 
 If a hard refresh doesn't do it, open the page in a private window. That never uses the stored copy, so what you see there is genuinely what everyone else sees.
 

@@ -147,6 +147,30 @@ address { font-style: normal; }
 
 @media print { .alert { display: none; } }
 
+/* =========================================================================
+   Preview ribbon
+   Only ever rendered on the private preview copy of the site, built from the
+   `drafts` branch. Intentionally unmissable and intentionally not red — red
+   is the closure banner's job, and confusing the two would be worse than no
+   ribbon at all.
+   ========================================================================= */
+
+.preview-ribbon {
+  background: #1F2933;
+  color: var(--white);
+  border-bottom: 3px solid #F0B429;
+}
+.preview-ribbon__inner {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .6rem;
+  padding-block: .65rem;
+  font-size: .92rem; line-height: 1.5;
+}
+.preview-ribbon strong { color: #FFD466; }
+.preview-ribbon span { color: #CBD2D9; }
+.preview-ribbon em { font-style: normal; font-weight: 700; color: var(--white); }
+
+@media print { .preview-ribbon { display: none; } }
+
 .ministry-band {
   background: var(--ink);
   color: #D9D2CC;

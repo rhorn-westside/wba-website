@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }} — Christian School in Katy, TX{% endif %}</title>
 <meta name="description" content="{{ description or site.purpose }}">
+{% if env.preview %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="{{ title or site.name }}">
@@ -38,6 +39,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+{% include "partials/preview-ribbon.njk" %}
 {% include "partials/alert.njk" %}
 {% include "partials/header.njk" %}
 <main id="main">

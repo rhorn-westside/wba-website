@@ -1,0 +1,93 @@
+name: Publish to the live site
+
+# The Publish button.
+#
+# The office edits the `drafts` branch, which builds to a private preview
+# address. This workflow is what moves those edits onto the real website:
+# it merges drafts into main, checks the result, and deploys.
+#
+# It does the deploy itself rather than letting the ordinary push-to-main
+# workflow handle it. That is deliberate: a push made with GITHUB_TOKEN does
+# not start another workflow, so the ordinary deploy would never fire and the
+# button would appear to do nothing.
+#
+# Note the order below. Everything is built and checked BEFORE main is
+# pushed, so a change that breaks a link fails here with the live site still
+# untouched.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Merge the drafts branch into main
+        run: |
+          git config user.name "Publish button"
+          git config user.email "actions@github.com"
+          git fetch origin drafts
+          if git diff --quiet HEAD origin/drafts; then
+            echo "Nothing to publish — the live site already matches drafts."
+            echo "nothing_to_do=true" >> "$GITHUB_ENV"
+          else
+            git merge --no-edit origin/drafts
+          fi
+
+      - uses: actions/setup-node@v4
+        if: env.nothing_to_do != 'true'
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        if: env.nothing_to_do != 'true'
+        run: npm ci
+
+      - name: Build site
+        if: env.nothing_to_do != 'true'
+        run: npm run build
+        env:
+          SITE_ENV: production
+
+      - name: Check every internal link resolves
+        if: env.nothing_to_do != 'true'
+        run: node scripts/check-links.mjs
+
+      - name: Check the CMS config still matches the content
+        if: env.nothing_to_do != 'true'
+        run: node scripts/check-cms-config.mjs
+
+      - name: Push the merge to main
+        if: env.nothing_to_do != 'true'
+        run: git push origin main
+
+      - name: Deploy to the live site
+        if: env.nothing_to_do != 'true'
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LIVELY_MEADOW_02DD32510 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: upload
+          app_location: "_site"
+          output_location: ""
+          skip_app_build: true
+          api_location: ""
+          production_branch: main
+
+      - name: Put drafts back level with the live site
+        if: env.nothing_to_do != 'true'
+        run: git push origin main:drafts
