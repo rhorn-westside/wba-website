@@ -62,12 +62,12 @@ jobs:
           app_location: "_site"
           output_location: ""
           skip_app_build: true
-          # The tour-request Azure Function is NOT deployed yet. Until the
-          # Microsoft Graph settings exist there is nothing for it to do, and
-          # leaving it out removes a way the deploy can fail. To turn it on:
-          # set api_location to "api" below, add the five app settings in the
-          # Azure portal, and push.
-          api_location: ""
+          # The tour-request function. It needs five application settings in
+          # the Azure portal (GRAPH_TENANT_ID, GRAPH_CLIENT_ID,
+          # GRAPH_CLIENT_SECRET, INQUIRY_FROM, INQUIRY_TO). Without them it
+          # returns 503 and the form tells the visitor to phone instead — it
+          # logs the submission either way, so a lead is never lost.
+          api_location: "api"
           # Anything that is not main is a preview environment, never the
           # live site. This is the line that makes the whole scheme safe.
           production_branch: main

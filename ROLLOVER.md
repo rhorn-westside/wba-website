@@ -100,3 +100,4 @@ Search the site for the old school year and update anything left:
 
 - [ ] Fresh photographs — nothing dates a school site faster than students who have graduated
 - [ ] Re-read the handbook-derived pages (attendance, dress code, conduct, grading) against the new handbook, since policies drift year to year
+- [ ] **Check the tour form still works.** Submit a test request and confirm it arrives. The Microsoft Graph client secret behind it expires on a date set when it was created — usually two years out. When it expires the form stops sending, and the only visible sign is a visitor being told to phone instead. Note the expiry date somewhere you will actually look; `MAINTENANCE.md` explains how to issue a new secret.

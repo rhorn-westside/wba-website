@@ -89,7 +89,7 @@ jobs:
           app_location: "_site"
           output_location: ""
           skip_app_build: true
-          api_location: ""
+          api_location: "api"
           production_branch: main
 
       - name: Put drafts back level with the live site

@@ -62,6 +62,35 @@ Those defaults are the fallback: delete `theme.json` and the site builds unchang
 
 To add a control: add the key to `theme.json`, handle it in `buildTheme()`, declare it in `.pages.yml` under `Look & Feel`, and make sure the CSS consumes the variable with a sensible fallback (`var(--base-size, 1.0625rem)`). `check-cms-config.mjs` will fail the build if the config and the file disagree.
 
+### The tour form
+
+`api/src/functions/inquiry.js` is an Azure Function that emails the office via Microsoft Graph, using client-credentials auth against the school's Microsoft 365 tenant. `api_location: "api"` in both deploy workflows is the switch that ships it.
+
+Five application settings, in the Azure portal under **Static Web App → Settings → Environment variables**:
+
+| Setting | Value |
+|---|---|
+| `GRAPH_TENANT_ID` | Entra tenant (directory) ID |
+| `GRAPH_CLIENT_ID` | App registration client ID |
+| `GRAPH_CLIENT_SECRET` | Secret value for that registration |
+| `INQUIRY_FROM` | Mailbox that sends |
+| `INQUIRY_TO` | Where inquiries land (comma-separated for several) |
+
+The app registration needs the Graph **application** permission `Mail.Send` with admin consent.
+
+**Scope it.** `Mail.Send` as an application permission lets the app send as *any* mailbox in the tenant. Restrict it to the one sending mailbox with an ApplicationAccessPolicy in Exchange Online PowerShell:
+
+```powershell
+New-ApplicationAccessPolicy -AppId <client-id> `
+  -PolicyScopeGroupId <sending-mailbox@domain> `
+  -AccessRight RestrictAccess `
+  -Description "WBA website tour form"
+```
+
+**The secret expires.** When it does, `getGraphToken` throws, the function returns 502, and the visitor is told to phone. Nothing alerts anyone. The submission is still written to the log stream, so leads survive, but the failure is silent — hence the item in `ROLLOVER.md`.
+
+Failure behaviour by design: missing settings → 503; Graph failure → 502; both log the full submission via `context.error` so nothing is lost while the plumbing is broken.
+
 ### Turning the preview scheme off
 
 Delete `publish.yml`, drop `drafts` from the `push` trigger in `azure-static-web-apps.yml`, delete the `drafts` branch, and point the office's Pages CMS bookmark back at `main`. The `env.preview` flag then evaluates false everywhere and the ribbon never renders. Nothing else depends on it.
