@@ -112,14 +112,19 @@
           "note": ""
         },
         {
-          "title": "Student Church Attendance Form",
-          "file": "",
-          "note": ""
+          "title": "Friday Folder & Church Attendance Form",
+          "file": "friday-folder-and-church-attendance-form.pdf",
+          "note": "Returned each Monday. Records which services were attended, and how many pages are in the folder."
         },
         {
           "title": "Student Handbook",
           "file": "",
           "note": ""
+        },
+        {
+          "title": "Important Dates Commitment",
+          "file": "important-dates-commitment-2026-2027.pdf",
+          "note": "Programs, fellowships and the break schedule for 2026–2027. Signed and returned."
         }
       ]
     },
@@ -138,7 +143,7 @@
         },
         {
           "title": "Pick Up Permission Slip",
-          "file": "",
+          "file": "pick-up-permission-slip.pdf",
           "note": "Names anyone besides a parent who may collect a student."
         }
       ]
