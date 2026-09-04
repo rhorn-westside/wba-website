@@ -37,10 +37,6 @@
         {
           "title": "Junior & Senior High (6–12)",
           "url": "/academics/secondary/"
-        },
-        {
-          "title": "Grading & Reporting",
-          "url": "/academics/grading/"
         }
       ]
     },
@@ -105,14 +101,14 @@
           "url": "/families/homework/"
         },
         {
+          "title": "Grading & Reporting",
+          "url": "/families/grading/"
+        },
+        {
           "title": "Forms & Documents",
           "url": "/families/forms/"
         }
       ]
-    },
-    {
-      "title": "Give",
-      "url": "/give/"
     },
     {
       "title": "Contact",

@@ -4,3 +4,6 @@ _site/
 .env
 local.settings.json
 api/node_modules/
+
+# scratch: my sandbox cannot delete files, so removals land here
+_to_delete/

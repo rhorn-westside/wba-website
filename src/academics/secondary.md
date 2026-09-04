@@ -1,11 +1,11 @@
 ---
-title: Junior & Senior High
-lede: A departmentalized, college-preparatory program for grades 6 through 12,
-  with teachers who still know every student's name.
-eyebrow: Academics
 layout: layouts/page.njk
+eyebrow: Academics
+title: Junior & Senior High
+lede: A departmentalized, college-preparatory program for grades 6 through 12, with teachers who still know every student's name.
 permalink: /academics/secondary/
 ---
+
 ## Departmentalized, but not anonymous
 
 From sixth grade, students move between teachers by subject. In a large school that is the point at which children start becoming invisible. Here, the same eight or ten adults see the same students all day, every year, until they graduate — so a student having a hard month is noticed by several of them at once.
@@ -45,15 +45,14 @@ Weekly folders show progress as it happens. Progress reports come four and a hal
 
 High school students may not be given credit for a course if they miss more than twelve days in a semester, so attendance is worth watching closely.
 
-[Grading policy &rarr;](/academics/grading/) &middot; [Attendance policy &rarr;](/families/attendance/)
+[Grading policy &rarr;](/families/grading/) &middot; [Attendance policy &rarr;](/families/attendance/)
 
 ## Graduation requirements
 
 Recommended course of study:
 
-
 | Subject | Credits |
-| ---------------- | ------- |
+|---|---:|
 | Bible | 4 |
 | English | 4 |
 | Math | 4 |
@@ -62,7 +61,6 @@ Recommended course of study:
 | Foreign Language | 2 |
 | Electives | 4 |
 | **Total** | **26** |
-
 
 Electives carry half a credit per year each: P.E., Art, Choir, Computers, Ensemble, Orchestra and Speech.
 
@@ -87,3 +85,7 @@ Students are advised on the subjects they should take, and are encouraged to att
 ## Honors and awards
 
 Student achievements are recognized at award ceremonies through the year and at graduation.
+
+{% todo "Course catalog" %}
+The credits above come from the handbook. What is still missing is a course catalog — each course offered, with a paragraph describing it. Families of eighth and ninth graders deciding whether to commit to the Academy through high school ask for exactly this.
+{% endtodo %}

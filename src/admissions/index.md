@@ -32,7 +32,7 @@ We would rather a family read our position and decide against us than enroll and
 
 College-preparatory coursework, teacher-led instruction, annual standardized achievement testing, and a published grading policy that anyone can check.
 
-[Academics &rarr;](/academics/) &middot; [Grading policy &rarr;](/academics/grading/)
+[Academics &rarr;](/academics/) &middot; [Grading policy &rarr;](/families/grading/)
 
 ## Come and look
 
