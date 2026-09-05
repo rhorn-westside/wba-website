@@ -1,16 +1,13 @@
 ---
-layout: layouts/page.njk
-eyebrow: Current Families
 title: Homework
 lede: What to expect at your kitchen table on a school night.
+eyebrow: Current Families
+layout: layouts/page.njk
 permalink: /families/homework/
 ---
+[This week's homework schedule →]({{ site.homeworkUrl }})
 
-<p class="lead-action">
-  <a class="btn" href="{{ site.homeworkUrl }}" rel="noopener">This week's homework schedule &rarr;</a>
-</p>
-
-Schedules are published for each grade, 6th through 12th, laid out Monday to Friday by subject. Elementary sheets go home in the weekly folder.
+Schedules are published for each grade, K through 12th, laid out Monday to Friday by subject.
 
 ## Expect homework most nights
 
