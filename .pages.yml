@@ -659,7 +659,7 @@ content:
   - name: grading
     label: "Grading & Reporting"
     type: file
-    path: src/academics/grading.md
+    path: src/families/grading.md
     fields:
       - name: title
         label: Page title

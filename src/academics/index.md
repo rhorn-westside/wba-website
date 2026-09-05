@@ -1,11 +1,11 @@
 ---
-title: Academics
-lede: A college-preparatory program from K5 through twelfth grade, taught by
-  teachers rather than software.
-eyebrow: Academics
 layout: layouts/page.njk
+eyebrow: Academics
+title: Academics
+lede: A college-preparatory program from K5 through twelfth grade, taught by teachers rather than software.
 permalink: /academics/
 ---
+
 ## How the year is organized
 
 The school year runs in four nine-week grading periods, two per semester. Progress reports go home partway through each quarter; report cards follow at the end of it. Semester grades are the average of that semester's two quarters, and the final year grade is the average of the two semesters.
@@ -14,13 +14,11 @@ Parents are not left waiting for either one. All students receive weekly folders
 
 ## The school day
 
-
-|  |  |
-| --------------------------------------- | ------- |
+| | |
+|---|---|
 | School begins | 7:45 AM |
 | Elementary dismissal (K5–5) | 3:05 PM |
 | Junior and Senior High dismissal (6–12) | 3:15 PM |
-
 
 ## Two divisions, one campus
 
@@ -33,6 +31,16 @@ Parents are not left waiting for either one. All students receive weekly folders
 ## Curriculum
 
 Westside Baptist Academy teaches from established Christian-school curriculum, principally BJU Press, chosen because it is academically serious and because it does not require a teacher to work around the worldview of the textbook in front of them.
+
+{% todo "Curriculum detail by subject" %}
+If you want to publish the specific publisher and edition per subject per grade, that table goes here. Some parents — particularly those transferring in or considering leaving homeschool — will read it closely.
+{% endtodo %}
+
+## How we grade
+
+Work is graded on a straightforward hundred-point scale, and parents hear where a student stands twice each nine weeks — a progress report at the midpoint and a report card at the end. Nothing about a grade should ever come as a surprise in May.
+
+[Grading and reporting in full &rarr;](/families/grading/)
 
 ## Standardized testing
 

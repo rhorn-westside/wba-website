@@ -44,13 +44,11 @@ Dishonesty of any kind is not tolerated. A student who cheats places their enrol
 
 ## Discipline system
 
-**Minor problems** — a student may be assigned sentences to write, denied privileges, or given a teacher-directed project.
+Minor problems are handled by the teacher. Continued or serious problems bring a conduct note home, then a parent conference — a child's behavior is a conversation between school and home, not a school matter alone.
 
-**Major or continual problems** — an after-school detention and/or a parent conference. A conduct note sent home signals that a student is not responding to a teacher's admonitions and needs the parent's help.
+Where behavior does not improve, suspension or withdrawal may follow, undertaken with prayerful consultation between administration and parents.
 
-If the situation does not improve, a parent conference is called. If the behavior still does not improve, suspension or expulsion may become necessary — both undertaken with prayerful consultation between administration and parents.
-
-Students who are asked to withdraw, or are not permitted to return for disciplinary reasons, may not visit campus or attend school programs for a minimum of one calendar year.
+The full discipline procedure is set out in the Student Handbook.
 
 ## If your child comes home unhappy about a policy
 
@@ -61,23 +59,23 @@ Students who are asked to withdraw, or are not permitted to return for disciplin
 
 ## Zero tolerance
 
-Illegal drugs, controlled substances, alcoholic beverages, obscene or pornographic materials, knives, and any other weapons are not tolerated. Students possessing these items are subject to expulsion. An unloaded weapon is still a dangerous weapon. Please do not send a kitchen knife for use at lunch.
+Illegal drugs, controlled substances, alcoholic beverages, obscene or pornographic materials, knives and any other weapons are not tolerated, and students possessing them are subject to expulsion. An unloaded weapon is still a dangerous weapon.
 
-Where a weapon is brought accidentally, intent is a factor only for students in fifth grade or younger — unless a student, on realizing it, immediately turns the item in to the office voluntarily. For junior and senior high students, the administration makes the final determination based on the evidence.
+The handbook sets out how this is applied.
 
 ## Electronics
 
-Smart watches (including Apple Watches), iPads, cell phones, electronic games, recorders, lighters, matches, games, toys, sports cards, playing cards, fidget spinners and cameras are not brought to school or to any school activity. All educational electronic equipment must be approved by the administration.
+Phones, smart watches and other personal electronics are turned in to the office on arrival and collected at the end of the day. Toys, games and cameras are not brought to school or to school activities. Educational equipment must be approved by the administration.
 
-Cell phones and all electronic devices, including smartwatches, are turned in to the office on arrival. Students who abuse this policy lose the privilege of bringing such devices on campus.
+The school telephone may not be used by students during the school day unless there is an emergency, and then only with permission from the office.
 
-The school telephone may not be used by students between 7:45 AM and 3:25 PM unless there is an emergency, and then only with permission from the office.
+The handbook lists the specifics.
 
 ## Search policy
 
-Anything placed in lockers or desks must be approved by the teacher. The school reserves the right to ask a student to reveal the contents of their locker, pockets, purse, backpack, automobile, desk, electronic devices and person, with or without cause. Lockers may be inspected by the administration at any time.
+Lockers and desks remain school property and may be inspected. Where a search of a student becomes necessary, a parent or guardian is contacted first and is present before it takes place.
 
-If a physical body search is deemed necessary, a parent or guardian is contacted and is present at the school before the search takes place.
+The full policy is set out in the Student Handbook.
 
 ## Around campus
 

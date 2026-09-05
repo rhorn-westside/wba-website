@@ -17,6 +17,11 @@
   },
   "routes": [
     {
+      "route": "/academics/grading/*",
+      "redirect": "/families/grading/",
+      "statusCode": 301
+    },
+    {
       "route": "/api/inquiry",
       "methods": [
         "POST"

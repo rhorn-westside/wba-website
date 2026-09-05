@@ -28,7 +28,7 @@ Parents can view or print the current week's sheet without signing in.
 
 Elementary grading follows the same structure as junior and senior high, with two differences suited to younger students: teachers may include an **Effort and Participation** category, and Art and PE are marked E / S / NI / U rather than given numeric grades.
 
-[Full grading policy &rarr;](/academics/grading/)
+[Full grading policy &rarr;](/families/grading/)
 
 ## Supplies and book lists
 
