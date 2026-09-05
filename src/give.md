@@ -1,11 +1,11 @@
 ---
-layout: layouts/page.njk
-eyebrow: Support
 title: Give to the Academy
-lede: Tuition does not cover everything a school this size wants to do for its students.
+lede: Tuition does not cover everything a school our size wants to do for its
+  students.
+eyebrow: Support
+layout: layouts/page.njk
 permalink: /give/
 ---
-
 Westside Baptist Academy is a ministry, not a business. Tuition is set to keep a Christian education within reach of ordinary families, which means it covers the essentials and not much beyond them. Gifts to the Academy close that gap.
 
 ## Where gifts go
@@ -18,7 +18,7 @@ Note that tuition and fees are payments rather than contributions — the school
 
 ### Zelle
 
-Send to **wbabillpay@mywestside.org**
+Send to **[wbabillpay@mywestside.org](mailto:wbabillpay@mywestside.org)**
 
 ### By mail or in person
 
