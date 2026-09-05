@@ -249,6 +249,10 @@ content:
       - { name: mascot, label: Mascot (leave as it is), type: string }
       - { name: logo, label: Header logo file (leave as it is), type: string }
       - { name: logoLarge, label: Large logo file (leave as it is), type: string }
+      - name: homeworkUrl
+        label: Homework schedule address
+        type: string
+        description: "Where the Homework Schedule buttons point. Change it here and every link on the site follows."
       - { name: url, label: Website address (leave as it is), type: string }
 
   # -------------------------------------------------------------------

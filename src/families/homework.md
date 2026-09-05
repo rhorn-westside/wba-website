@@ -6,6 +6,12 @@ lede: What to expect at your kitchen table on a school night.
 permalink: /families/homework/
 ---
 
+<p class="lead-action">
+  <a class="btn" href="{{ site.homeworkUrl }}" rel="noopener">This week's homework schedule &rarr;</a>
+</p>
+
+Schedules are published for each grade, 6th through 12th, laid out Monday to Friday by subject. Elementary sheets go home in the weekly folder.
+
 ## Expect homework most nights
 
 Students have homework nearly every night, and are required to complete all assignments. Homework is considered complete when it is finished and handed to the teacher at the time it is due.
@@ -19,6 +25,8 @@ All students receive weekly folders showing their progress. Anything sent home t
 ## Weekly homework schedules
 
 Each grade in 6th through 12th receives a schedule laid out Monday through Friday by subject. Elementary grades receive a sheet as well, which depending on the grade also carries a memory verse, a spelling list, a place for parent initials and a note from the teacher.
+
+[Open this week's schedule &rarr;]({{ site.homeworkUrl }})
 
 ## Make-up work after an absence
 

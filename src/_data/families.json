@@ -2,6 +2,12 @@
   "lede": "The things you actually need on a Tuesday morning, in one place.",
   "doors": [
     {
+      "heading": "This Week’s Homework",
+      "text": "The live schedule for grades 6–12, laid out Monday to Friday by subject.",
+      "linkText": "Open the schedule",
+      "url": "%HOMEWORK%"
+    },
+    {
       "heading": "School Calendar",
       "text": "Quarters, breaks, programs and the dates the school asks every family to hold.",
       "linkText": "See the calendar",

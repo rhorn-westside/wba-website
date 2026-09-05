@@ -18,8 +18,10 @@ permalink: /families/
 <div class="section">
   <div class="wrap">
     <div class="doors">
+      {# %HOMEWORK% resolves to site.homeworkUrl, so the Warrior Hub address
+         lives in School Information and changes in exactly one place. #}
       {% for door in families.doors %}
-      <a class="door" href="{{ door.url }}">
+      <a class="door" href="{{ door.url | replace('%HOMEWORK%', site.homeworkUrl) }}"{% if '%HOMEWORK%' in door.url %} rel="noopener"{% endif %}>
         <h3>{{ door.heading }}</h3>
         <p>{{ door.text }}</p>
         <span class="door__more">{{ door.linkText }}</span>

@@ -171,6 +171,8 @@ address { font-style: normal; }
 
 @media print { .preview-ribbon { display: none; } }
 
+.lead-action { margin: 0 0 2rem; }
+
 .ministry-band {
   background: var(--ink);
   color: #D9D2CC;
