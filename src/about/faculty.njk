@@ -3,7 +3,14 @@ layout: layouts/base.njk
 title: Faculty & Staff
 description: The faculty and staff of Westside Baptist Academy are ministry-minded individuals who know each student by name.
 permalink: /about/faculty/
+noindex: true
 ---
+
+{# noindex: true keeps this page out of Google and off the sitemap. It is
+   still a public page — anyone with the link, or following the link in the
+   footer, can read it. What it stops is staff names surfacing in a search for
+   their own name. If the page needs to be genuinely private, that is a
+   different job and needs a login. #}
 
 <div class="page-head">
   <div class="wrap">

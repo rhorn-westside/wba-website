@@ -4,11 +4,15 @@ eleventyExcludeFromCollections: true
 layout: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+{#- A page marked `noindex: true` is left out. Listing a page in the sitemap
+    while telling search engines not to index it is a contradiction, and
+    Google reports it as an error in Search Console. -#}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for item in collections.all %}
-  {%- if not item.url.endsWith(".html") %}
+  {%- if not item.url.endsWith(".html") and not item.data.noindex %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ item.date | isoDate }}</lastmod>
   </url>
   {%- endif %}
 {%- endfor %}
