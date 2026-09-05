@@ -8,7 +8,14 @@
 {% if env.preview %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="stylesheet" href="/assets/css/site.css">
 {% include "partials/theme.njk" %}
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+{# The school crest, at the sizes each place actually uses. The .ico carries
+   16/32/48/64 for browser tabs; the 180 is what iOS uses when a parent adds
+   the site to their home screen. #}
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#C30D11">
 <meta property="og:title" content="{{ title or site.name }}">
 <meta property="og:description" content="{{ description or site.purpose }}">
 <meta property="og:type" content="website">
