@@ -92,8 +92,16 @@ jobs:
       - name: Confirm the tour form answered
         # The deploy reports success once the files are uploaded, which is not
         # the same as the function being reachable. This asks the live site
-        # directly and fails loudly if the API did not come up, so a broken
-        # form can never again hide behind a green tick.
+        # directly.
+        #
+        # It distinguishes two very different problems, because conflating them
+        # made the run red for something a redeploy could never fix:
+        #
+        #   404 / 405  the function is not there at all -> the deploy is broken,
+        #              fail the run.
+        #   502 / 503  the function answered but cannot send -> a settings or
+        #              mailbox problem outside this workflow. Warn; do not fail,
+        #              because publishing site content is not what went wrong.
         run: |
           sleep 25
           code=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
@@ -101,10 +109,17 @@ jobs:
             -d '{"website":"bot"}' \
             "https://lively-meadow-02dd32510.7.azurestaticapps.net/api/inquiry")
           echo "POST /api/inquiry returned $code"
-          if [ "$code" = "404" ] || [ "$code" = "405" ]; then
-            echo "::error::The tour form endpoint is not responding ($code). The function did not deploy."
-            exit 1
-          fi
+          case "$code" in
+            404|405)
+              echo "::error::The tour form endpoint is missing ($code). The function did not deploy."
+              exit 1 ;;
+            502|503)
+              echo "::warning::The tour form is deployed but cannot send mail ($code). Check the Graph settings in the Azure portal. Site content published normally." ;;
+            200)
+              echo "Tour form is answering normally." ;;
+            *)
+              echo "::warning::Unexpected response from the tour form ($code)." ;;
+          esac
 
       - name: Put drafts back level with the live site
         if: env.merged == 'yes'
