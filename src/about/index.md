@@ -1,10 +1,10 @@
 ---
-layout: layouts/page.njk
-eyebrow: About
 title: About the Academy
-lede: Westside Baptist Academy opened in 2007 as a ministry of Westside Baptist Church, serving families across Katy and west Houston.
+lede: Westside Baptist Academy opened in 2007 as a ministry of Westside Baptist
+  Church, serving families across Katy and west Houston.
+eyebrow: About
+layout: layouts/page.njk
 ---
-
 ## Our purpose
 
 > Westside Baptist Academy is an extension of the Christian home and church in preparing young people for both time and eternity, so that these young people might be "conformed to the image of [Christ]."
