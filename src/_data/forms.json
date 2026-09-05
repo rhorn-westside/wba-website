@@ -129,7 +129,7 @@
         {
           "title": "Pick Up Permission Slip",
           "file": "pick-up-permission-slip.pdf",
-          "note": "Names anyone besides a parent who may collect a student."
+          "note": "Names anyone besides a parent who may pick up a student."
         }
       ]
     }
