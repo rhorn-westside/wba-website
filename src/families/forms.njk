@@ -39,9 +39,10 @@ permalink: /families/forms/
       </ul>
       {% endfor %}
 
-      {% todo "Two documents still to upload" %}
-      <p>Two items above have no file attached yet and show as “Coming soon” to parents: the Student Handbook and the athletics Physical Evaluation Form.</p>
-      {% endtodo %}
+      {# A document with no file attached shows as "Coming soon" on its own,
+         which is all a parent needs to know. There was a yellow editorial note
+         here listing what was still missing — that was a note to the office,
+         and it was being published. #}
 
       <h2>Trouble with a form?</h2>
       <p>Call the office at <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a> or email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>. Paper copies are always available in the school office.</p>
