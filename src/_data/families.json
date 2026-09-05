@@ -3,7 +3,7 @@
   "doors": [
     {
       "heading": "This Week’s Homework",
-      "text": "The live schedule for grades 6–12, laid out Monday to Friday by subject.",
+      "text": "The live schedule for laid out Monday to Friday by subject.",
       "linkText": "Open the schedule",
       "url": "%HOMEWORK%"
     },
