@@ -122,9 +122,14 @@ export default function (eleventyConfig) {
   // Current year, for the footer copyright line.
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // Marks content the office still needs to supply. Renders visibly in the
-  // page so nothing ships to parents looking finished but blank.
+  // Marks content the office still needs to supply.
+  //
+  // These are notes to ourselves, not to parents, so they appear ONLY on the
+  // preview site. On the live site the block disappears entirely -- no gap, no
+  // placeholder. That way a note can sit in the source for as long as it takes
+  // to get the real content, without a parent ever reading our to-do list.
   eleventyConfig.addPairedShortcode("todo", (content, label) => {
+    if (process.env.SITE_ENV !== "preview") return "";
     return `<div class="todo" role="note"><span class="todo__label">Needs content${
       label ? `: ${label}` : ""
     }</span>${content}</div>`;

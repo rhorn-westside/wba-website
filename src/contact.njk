@@ -78,11 +78,15 @@ permalink: /contact/
 
     </div>
 
+    {# The wrapper is inside the condition too, so the live page has no empty
+       div left behind holding open a margin. #}
+    {% if env.preview %}
     <div class="prose u-mt-md">
       {% todo "Map and photo" %}
       <p>An embedded map and a photograph of the campus entrance both belong on this page. A picture of the door a visitor should walk through removes real friction on the day of a tour.</p>
       {% endtodo %}
     </div>
+    {% endif %}
 
   </div>
 </div>
