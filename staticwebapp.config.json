@@ -6,7 +6,7 @@
     "exclude": [
       "/assets/*",
       "/files/*",
-      "*.{png,jpg,jpeg,svg,webp,ico,pdf,css,js,xml,txt}"
+      "*.{png,jpg,jpeg,svg,webp,ico,pdf,css,js,xml,txt,webmanifest,json}"
     ]
   },
   "responseOverrides": {
