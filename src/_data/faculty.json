@@ -7,58 +7,49 @@
       "bio": "Pastor Butts has served in ministry for more than forty years and serves as Senior Pastor of Westside Baptist Church."
     },
     {
-      "name": "Mr. Ray Horn",
+      "name": "Mr. Raymond L. Horn",
       "role": "Principal",
-      "group": "Administration",
-      "bio": ""
+      "group": "Administration"
     },
     {
       "name": "Mrs. Jennifer Cabrera",
-      "role": "WBC & WBA Secretary",
-      "group": "Administration",
-      "bio": ""
+      "role": "Secretary",
+      "group": "Administration"
     },
     {
       "name": "Mrs. Dayde Guerrero",
-      "role": "Kindergarten & 1st Grade",
-      "group": "Elementary",
-      "bio": ""
+      "role": "Kindergarten & 1st Grade Teacher",
+      "group": "Elementary"
     },
     {
       "name": "Mrs. Alyssa Cabrera",
-      "role": "2nd & 3rd Grade",
-      "group": "Elementary",
-      "bio": ""
+      "role": "2nd & 3rd Grade Teacher",
+      "group": "Elementary"
     },
     {
       "name": "Miss Sarah Anderson",
-      "role": "4th & 5th Grade",
-      "group": "Elementary",
-      "bio": ""
+      "role": "4th & 5th Grade Teacher",
+      "group": "Elementary"
     },
     {
       "name": "Miss Teresa Ward",
-      "role": "Secondary Science & Art",
-      "group": "Junior & Senior High",
-      "bio": ""
+      "role": "Secondary Science & Art Teacher",
+      "group": "Junior & Senior High"
     },
     {
       "name": "Miss Emmalee Storey",
-      "role": "Secondary English",
-      "group": "Junior & Senior High",
-      "bio": ""
+      "role": "Secondary English Teacher",
+      "group": "Junior & Senior High"
     },
     {
       "name": "Mr. Kenny Zhu",
-      "role": "Secondary Math",
-      "group": "Junior & Senior High",
-      "bio": ""
+      "role": "Secondary Math Teacher",
+      "group": "Junior & Senior High"
     },
     {
       "name": "Mrs. Debbie Butts",
-      "role": "Fine Arts Coordinator & Instrumental Lessons",
-      "group": "Fine Arts",
-      "bio": ""
+      "role": "Fine Arts Coordinator",
+      "group": "Fine Arts"
     }
   ]
 }
