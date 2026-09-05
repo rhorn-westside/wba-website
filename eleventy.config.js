@@ -94,6 +94,17 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Builds the URL for an uploaded document.
+  //
+  // Pages CMS stores a file it uploaded as "/files/name.pdf", while a value
+  // typed by hand is usually just "name.pdf". The template used to prepend
+  // "/files/" unconditionally, so the office's first CMS upload produced
+  // /files//files/name.pdf and failed the link check. Accept either form.
+  eleventyConfig.addFilter("fileUrl", (name) => {
+    if (!name) return "";
+    return "/files/" + String(name).trim().replace(/^\/*files\/*/i, "");
+  });
+
   // Nunjucks' selectattr is unreliable across versions; this is explicit.
   eleventyConfig.addFilter("where", (arr, key, value) =>
     (arr || []).filter((item) => item[key] === value)

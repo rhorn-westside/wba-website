@@ -24,7 +24,7 @@ permalink: /families/forms/
         {% for item in group.items %}
         <li>
           {% if item.file %}
-          <a href="/files/{{ item.file }}">
+          <a href="{{ item.file | fileUrl }}">
             <span class="filelist__title">{{ item.title }}</span>
             <span class="filelist__note">{% if item.note %}{{ item.note }}{% else %}PDF{% endif %}</span>
           </a>
