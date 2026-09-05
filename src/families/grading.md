@@ -1,26 +1,26 @@
 ---
-layout: layouts/page.njk
-eyebrow: Current Families
 title: Grading & Reporting
-lede: How grades are calculated at Westside Baptist Academy, and when reports go home.
+lede: How grades are calculated at Westside Baptist Academy, and when reports go
+  home.
+eyebrow: Current Families
+layout: layouts/page.njk
 permalink: /families/grading/
 ---
-
 Westside Baptist Academy sets out its grading policy openly, so parents know what the numbers on a report card mean, how the year adds up, and when to expect each report.
 
 ## Grading scale
 
+
 | Grade | Range |
-|---|---|
+| ----- | ------------ |
 | A | 100–90 |
 | B | 89–80 |
 | C | 79–70 |
 | D | 69–60 |
 | F | 59 and below |
 
-Grades are determined through standardized tests, teacher-made tests, daily class work, homework, and teacher observation.
 
-A blank score is not counted against a student. A teacher enters a zero when the work should count against them.
+Grades are determined through standardized tests, teacher-made tests, daily class work, homework, and teacher observation.
 
 ## Marked subjects
 
@@ -53,8 +53,6 @@ All students receive **weekly folders** showing their progress.
 **Report cards** are issued every nine weeks and carry quarter grades, semester grades where applicable, absences, and total class tardies.
 
 Progress reports and report cards must be signed by parents and returned to the teacher the next day.
-
-Both list subjects in this order: Bible, History, Science, Math, English, Spanish, then electives.
 
 ## Nine-week conferences
 
