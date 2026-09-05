@@ -579,6 +579,31 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 .todo > p:last-child { margin-bottom: 0; }
 
+/* Campus photograph on the Contact page.
+   aspect-ratio holds the space before the image arrives, so the page does not
+   jump under the reader's eye on a slow phone connection. */
+.campus-photo {
+  margin: 0 0 1.5rem;
+}
+.campus-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4024 / 1821;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+/* On a phone the full 2.2:1 frame is a thin letterbox strip. Crop the sides
+   instead — the building and the entrance sit in the middle of the shot. */
+@media (max-width: 640px) {
+  .campus-photo img { aspect-ratio: 16 / 10; }
+}
+.campus-photo figcaption {
+  margin-top: .6rem;
+  font-size: .875rem;
+  color: var(--ink-faint);
+}
+
 /* =========================================================================
    Footer
    ========================================================================= */

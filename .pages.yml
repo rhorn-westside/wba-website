@@ -414,6 +414,11 @@ content:
       - name: lede
         label: Intro line under the heading
         type: string
+      - name: photoCaption
+        label: Caption under the campus photo
+        type: string
+        required: false
+        description: "Leave empty for no caption. A good one tells a visitor where to park and which door to walk through."
       - name: whoToAsk
         label: "Who to ask"
         type: object

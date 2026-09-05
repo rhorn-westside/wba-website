@@ -15,6 +15,36 @@ permalink: /contact/
   </div>
 </div>
 
+{# The campus photograph. Three widths are on disk; the browser picks the
+   smallest one that still looks sharp, so a parent on a phone downloads
+   44 KB rather than 200 KB. WebP first, JPEG for anything that cannot
+   read it. The caption is editable in the CMS and is left out when empty. #}
+<div class="wrap">
+  <figure class="campus-photo">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="/assets/img/campus-640.webp 640w,
+                /assets/img/campus-1000.webp 1000w,
+                /assets/img/campus-1600.webp 1600w"
+        sizes="(min-width: 1100px) 1040px, 100vw">
+      <img
+        src="/assets/img/campus-1000.jpg"
+        srcset="/assets/img/campus-640.jpg 640w,
+                /assets/img/campus-1000.jpg 1000w,
+                /assets/img/campus-1600.jpg 1600w"
+        sizes="(min-width: 1100px) 1040px, 100vw"
+        width="4024" height="1821"
+        alt="The Westside Baptist Academy campus: a single-storey red brick building with a covered walkway along the front, a large oak tree, and visitor parking directly in front of the entrance."
+        loading="eager"
+        decoding="async">
+    </picture>
+    {% if contact.photoCaption %}
+    <figcaption>{{ contact.photoCaption }}</figcaption>
+    {% endif %}
+  </figure>
+</div>
+
 <div class="section">
   <div class="wrap">
     <div class="grid grid--3">
@@ -82,8 +112,9 @@ permalink: /contact/
        div left behind holding open a margin. #}
     {% if env.preview %}
     <div class="prose u-mt-md">
-      {% todo "Map and photo" %}
-      <p>An embedded map and a photograph of the campus entrance both belong on this page. A picture of the door a visitor should walk through removes real friction on the day of a tour.</p>
+      {% todo "Close-up of the entrance" %}
+      <p>The campus photograph above is in place. What it does not do is show a first-time visitor <em>which door</em> — the entrance reads as a dark recess behind the tree at this scale.</p>
+      <p>A second, closer photograph of the main front doors would finish the job, along with a caption on the photo above. Set the caption under Contact Page in the CMS.</p>
       {% endtodo %}
     </div>
     {% endif %}
