@@ -7,74 +7,62 @@
       "items": [
         {
           "title": "Kindergarten",
-          "file": "2026-2027-book-list-kindergarten.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-kindergarten.pdf"
         },
         {
           "title": "1st Grade",
-          "file": "2026-2027-book-list-grade-01.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-01.pdf"
         },
         {
           "title": "2nd Grade",
-          "file": "2026-2027-book-list-grade-02.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-02.pdf"
         },
         {
           "title": "3rd Grade",
-          "file": "2026-2027-book-list-grade-03.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-03.pdf"
         },
         {
           "title": "4th Grade",
-          "file": "2026-2027-book-list-grade-04.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-04.pdf"
         },
         {
           "title": "5th Grade",
-          "file": "2026-2027-book-list-grade-05.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-05.pdf"
         },
         {
           "title": "6th Grade",
-          "file": "2026-2027-book-list-grade-06.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-06.pdf"
         },
         {
           "title": "7th Grade",
-          "file": "2026-2027-book-list-grade-07.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-07.pdf"
         },
         {
           "title": "8th Grade",
-          "file": "2026-2027-book-list-grade-08.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-08.pdf"
         },
         {
           "title": "9th Grade",
-          "file": "2026-2027-book-list-grade-09.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-09.pdf"
         },
         {
           "title": "10th Grade",
-          "file": "2026-2027-book-list-grade-10.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-10.pdf"
         },
         {
           "title": "11th Grade",
-          "file": "2026-2027-book-list-grade-11.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-11.pdf"
         },
         {
           "title": "12th Grade",
-          "file": "2026-2027-book-list-grade-12.pdf",
-          "note": ""
+          "file": "2026-2027-book-list-grade-12.pdf"
         }
       ]
     },
     {
       "group": "Supply Lists, 2026–2027",
       "intro": "Label everything with your child's name in permanent marker, and send it all on the first day of school.",
+      "columns": false,
       "items": [
         {
           "title": "Elementary Supply List",
@@ -90,11 +78,11 @@
     },
     {
       "group": "Enrollment",
+      "columns": false,
       "items": [
         {
           "title": "New Student Application",
-          "file": "wba-new-student-application.pdf",
-          "note": ""
+          "file": "wba-new-student-application.pdf"
         },
         {
           "title": "Financial Information Page",
@@ -108,8 +96,7 @@
         },
         {
           "title": "Church Affiliation Confirmation Form",
-          "file": "church-affiliation-confirmation-form.pdf",
-          "note": ""
+          "file": "church-affiliation-confirmation-form.pdf"
         },
         {
           "title": "Friday Folder & Church Attendance Form",
@@ -118,18 +105,18 @@
         },
         {
           "title": "Student Handbook",
-          "file": "",
-          "note": ""
+          "file": "/files/WBA-Student-Handbook-2026-2027.pdf"
         },
         {
           "title": "Important Dates Commitment",
           "file": "important-dates-commitment-2026-2027.pdf",
-          "note": "Programs, fellowships and the break schedule for 2026–2027. Signed and returned."
+          "note": "Programs, fellowships and the break schedule for 2026–2027. "
         }
       ]
     },
     {
       "group": "Permissions & Athletics",
+      "columns": false,
       "items": [
         {
           "title": "Sports Registration Form",
@@ -137,9 +124,7 @@
           "note": "One per sport, per season"
         },
         {
-          "title": "Physical Evaluation Form",
-          "file": "",
-          "note": ""
+          "title": "Physical Evaluation Form"
         },
         {
           "title": "Pick Up Permission Slip",
