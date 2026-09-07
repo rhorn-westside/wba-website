@@ -26,8 +26,9 @@ noindex: true
     {# Support Staff and Fine Arts are small — two people and one — so they
        share a row directly under Administration rather than each taking a
        full-width band of their own. The teaching sections follow. #}
-    {% macro group_block(group, extra) %}
+    {% macro group_block(group, extra, alphabetical) %}
       {% set members = faculty.people | where("group", group) %}
+      {% if alphabetical %}{% set members = members | bySurname %}{% endif %}
       {% if members.length %}
       <div class="faculty-group {{ extra }}">
         <h2>{{ group }}</h2>
@@ -78,8 +79,10 @@ noindex: true
       {{ group_block("Fine Arts", "faculty-pair__narrow") }}
     </div>
 
-    {{ group_block("Elementary", "") }}
-    {{ group_block("Junior & Senior High", "") }}
+    {# The teaching sections run alphabetically by surname. Administration,
+       Support Staff and Fine Arts keep the order they are given. #}
+    {{ group_block("Elementary", "", true) }}
+    {{ group_block("Junior & Senior High", "", true) }}
 
     <div class="prose">
       

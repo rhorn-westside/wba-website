@@ -35,10 +35,11 @@
       "photo": "debbie-butts"
     },
     {
-      "name": "Mrs. Dayde Guerrero",
-      "role": "Kindergarten & 1st Grade",
+      "name": "Miss Sarah Anderson",
+      "role": "4th & 5th Grade",
       "group": "Elementary",
-      "bio": ""
+      "bio": "",
+      "photo": "sarah-anderson"
     },
     {
       "name": "Mrs. Alyssa Cabrera",
@@ -48,32 +49,10 @@
       "photo": "alyssa-cabrera"
     },
     {
-      "name": "Miss Sarah Anderson",
-      "role": "4th & 5th Grade",
+      "name": "Mrs. Dayde Guerrero",
+      "role": "Kindergarten & 1st Grade",
       "group": "Elementary",
-      "bio": "",
-      "photo": "sarah-anderson"
-    },
-    {
-      "name": "Miss Teresa Ward",
-      "role": "Secondary Science & Art",
-      "group": "Junior & Senior High",
-      "bio": "",
-      "photo": "teresa-ward"
-    },
-    {
-      "name": "Miss Emmalee Storey",
-      "role": "Secondary English",
-      "group": "Junior & Senior High",
-      "bio": "",
-      "photo": "emmalee-storey"
-    },
-    {
-      "name": "Mr. Kenny Zhu",
-      "role": "Secondary Math",
-      "group": "Junior & Senior High",
-      "bio": "",
-      "photo": "kenny-zhu"
+      "bio": ""
     },
     {
       "name": "Pastor Juan Cabrera",
@@ -88,6 +67,27 @@
       "group": "Junior & Senior High",
       "bio": "",
       "photo": "jennifer-capizzo"
+    },
+    {
+      "name": "Miss Emmalee Storey",
+      "role": "Secondary English",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "emmalee-storey"
+    },
+    {
+      "name": "Miss Teresa Ward",
+      "role": "Secondary Science & Art",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "teresa-ward"
+    },
+    {
+      "name": "Mr. Kenny Zhu",
+      "role": "Secondary Math",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "kenny-zhu"
     }
   ]
 }

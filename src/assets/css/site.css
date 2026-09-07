@@ -480,7 +480,14 @@ address { font-style: normal; }
 /* Column 3, not 4. A whole empty column between the two headings read as a
    mistake rather than as spacing; a gap of a little over twice the card gap
    separates them without leaving a hole. */
-.faculty-pair__narrow { grid-column: 3 / span 1; margin-left: 1.25rem; }
+.faculty-pair__narrow {
+  grid-column: 3 / span 1;
+  /* Nudged right for a little breathing room. A margin would have taken the
+     space out of the card itself, leaving this photograph smaller than every
+     other one on the page; a shift keeps the card the full column width.
+     Column 4 is empty, so there is nothing to collide with. */
+  transform: translateX(1.25rem);
+}
 
 /* Narrower than this there is no room for two sections abreast, so they stack
    and behave exactly like every other group. */

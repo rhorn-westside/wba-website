@@ -110,6 +110,17 @@ export default function (eleventyConfig) {
     (arr || []).filter((item) => item[key] === value)
   );
 
+  // Alphabetical by surname, ignoring the honorific — "Miss Sarah Anderson"
+  // files under A. Done here rather than by hand in the data file so the order
+  // holds however the office happens to add someone in the CMS.
+  eleventyConfig.addFilter("bySurname", (people) =>
+    [...(people || [])].sort((a, b) => {
+      const key = (p) =>
+        String(p.name || "").trim().split(/\s+/).pop().toLowerCase();
+      return key(a).localeCompare(key(b));
+    })
+  );
+
   // First letter of a person's name, ignoring the honorific.
   eleventyConfig.addFilter("initial", (name) => {
     const stripped = String(name || "").replace(
