@@ -4,28 +4,14 @@
       "name": "Pastor Richard D. Butts",
       "role": "Administrator",
       "group": "Administration",
-      "bio": "Pastor Butts has served in ministry for more than forty years and serves as Senior Pastor of Westside Baptist Church."
+      "bio": ""
     },
     {
-      "name": "Mr. Ray Horn",
+      "name": "Mr. Raymond L. Horn",
       "role": "Principal",
       "group": "Administration",
       "bio": "",
       "photo": "ray-horn"
-    },
-    {
-      "name": "Mrs. Jennifer Cabrera",
-      "role": "WBC & WBA Secretary",
-      "group": "Administration",
-      "bio": "",
-      "photo": "jennifer-cabrera"
-    },
-    {
-      "name": "Mrs. Brenda Horn",
-      "role": "Librarian",
-      "group": "Administration",
-      "bio": "",
-      "photo": "brenda-horn"
     },
     {
       "name": "Mrs. Dayde Guerrero",
@@ -88,6 +74,20 @@
       "group": "Fine Arts",
       "bio": "",
       "photo": "debbie-butts"
+    },
+    {
+      "name": "Mrs. Jennifer Cabrera",
+      "role": "WBC & WBA Secretary",
+      "group": "Support Staff",
+      "bio": "",
+      "photo": "jennifer-cabrera"
+    },
+    {
+      "name": "Mrs. Brenda Horn",
+      "role": "Librarian",
+      "group": "Support Staff",
+      "bio": "",
+      "photo": "brenda-horn"
     }
   ]
 }

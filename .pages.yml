@@ -116,7 +116,7 @@ content:
             label: Section of the page
             type: select
             options:
-              values: ["Administration", "Elementary", "Junior & Senior High", "Fine Arts"]
+              values: ["Administration", "Elementary", "Junior & Senior High", "Fine Arts", "Support Staff"]
           - name: bio
             label: Short bio
             type: text
