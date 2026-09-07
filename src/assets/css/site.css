@@ -477,6 +477,14 @@ address { font-style: normal; }
   display: grid; place-items: center;
   font-family: var(--serif); font-size: 1.8rem; color: var(--ink-faint);
 }
+/* A real photograph replaces the initial. Same square footprint either way, so
+   a group with some photographs and some initials still lines up. */
+.person__photo--img { object-fit: cover; background: var(--paper-alt); }
+.person--incomplete { opacity: .75; }
+.person__role--missing {
+  color: #8A6A00; font-weight: 700;
+  text-transform: uppercase; font-size: .7rem; letter-spacing: .1em;
+}
 .person__name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin: 0 0 .15rem; }
 .person__role { font-size: .85rem; color: var(--red-dark); font-weight: 600; margin: 0 0 .6rem; }
 .person__bio { font-size: .9rem; color: var(--ink-soft); margin: 0; }

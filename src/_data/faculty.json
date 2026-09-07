@@ -7,49 +7,87 @@
       "bio": "Pastor Butts has served in ministry for more than forty years and serves as Senior Pastor of Westside Baptist Church."
     },
     {
-      "name": "Mr. Raymond L. Horn",
+      "name": "Mr. Ray Horn",
       "role": "Principal",
-      "group": "Administration"
+      "group": "Administration",
+      "bio": "",
+      "photo": "ray-horn"
     },
     {
       "name": "Mrs. Jennifer Cabrera",
-      "role": "Secretary",
-      "group": "Administration"
+      "role": "WBC & WBA Secretary",
+      "group": "Administration",
+      "bio": "",
+      "photo": "jennifer-cabrera"
     },
     {
       "name": "Mrs. Dayde Guerrero",
-      "role": "Kindergarten & 1st Grade Teacher",
-      "group": "Elementary"
+      "role": "Kindergarten & 1st Grade",
+      "group": "Elementary",
+      "bio": ""
     },
     {
       "name": "Mrs. Alyssa Cabrera",
-      "role": "2nd & 3rd Grade Teacher",
-      "group": "Elementary"
+      "role": "2nd & 3rd Grade",
+      "group": "Elementary",
+      "bio": "",
+      "photo": "alyssa-cabrera"
     },
     {
       "name": "Miss Sarah Anderson",
-      "role": "4th & 5th Grade Teacher",
-      "group": "Elementary"
+      "role": "4th & 5th Grade",
+      "group": "Elementary",
+      "bio": "",
+      "photo": "sarah-anderson"
     },
     {
       "name": "Miss Teresa Ward",
-      "role": "Secondary Science & Art Teacher",
-      "group": "Junior & Senior High"
+      "role": "Secondary Science & Art",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "teresa-ward"
     },
     {
       "name": "Miss Emmalee Storey",
-      "role": "Secondary English Teacher",
-      "group": "Junior & Senior High"
+      "role": "Secondary English",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "emmalee-storey"
     },
     {
       "name": "Mr. Kenny Zhu",
-      "role": "Secondary Math Teacher",
-      "group": "Junior & Senior High"
+      "role": "Secondary Math",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "kenny-zhu"
+    },
+    {
+      "name": "Pastor Juan Cabrera",
+      "role": "Spanish, Physical Education & Bible",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "juan-cabrera"
+    },
+    {
+      "name": "Mrs. Capizzo",
+      "role": "Study Hall",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "mrs-capizzo"
+    },
+    {
+      "name": "Mrs. Horn",
+      "role": "",
+      "group": "Junior & Senior High",
+      "bio": "",
+      "photo": "mrs-horn"
     },
     {
       "name": "Mrs. Debbie Butts",
-      "role": "Fine Arts Coordinator",
-      "group": "Fine Arts"
+      "role": "Fine Arts Coordinator & Instrumental Lessons",
+      "group": "Fine Arts",
+      "bio": "",
+      "photo": "debbie-butts"
     }
   ]
 }

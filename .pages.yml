@@ -122,6 +122,11 @@ content:
             type: text
             required: false
             description: Two or three sentences. Optional.
+          - name: photo
+            label: Photograph
+            type: string
+            required: false
+            description: "The file name without the size or extension — for example alyssa-cabrera. Leave empty and the person's initial is shown instead. New photographs have to be prepared at 300 and 600 pixels square before they can be named here."
 
   # -------------------------------------------------------------------
   - name: theme

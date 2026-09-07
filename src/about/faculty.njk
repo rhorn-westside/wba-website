@@ -31,12 +31,38 @@ noindex: true
         <h2>{{ group }}</h2>
         <div class="grid grid--4">
           {% for person in members %}
-          <div class="person">
+          {# An entry with no role is unfinished. It shows on the preview build
+             so the gap is visible to the office, and is left off the live site
+             rather than publishing a name with a blank line under it. #}
+          {% if person.role or env.preview %}
+          <div class="person{% if not person.role %} person--incomplete{% endif %}">
+            {% if person.photo %}
+            <picture>
+              <source type="image/webp"
+                      srcset="/assets/img/faculty/{{ person.photo }}-300.webp 300w,
+                              /assets/img/faculty/{{ person.photo }}-600.webp 600w"
+                      sizes="(min-width: 62rem) 15rem, (min-width: 40rem) 22vw, 45vw">
+              <img class="person__photo person__photo--img"
+                   src="/assets/img/faculty/{{ person.photo }}-300.jpg"
+                   srcset="/assets/img/faculty/{{ person.photo }}-300.jpg 300w,
+                           /assets/img/faculty/{{ person.photo }}-600.jpg 600w"
+                   sizes="(min-width: 62rem) 15rem, (min-width: 40rem) 22vw, 45vw"
+                   width="600" height="600"
+                   alt="{{ person.name }}"
+                   loading="lazy" decoding="async">
+            </picture>
+            {% else %}
             <div class="person__photo" aria-hidden="true">{{ person.name | initial }}</div>
+            {% endif %}
             <p class="person__name">{{ person.name }}</p>
+            {% if person.role %}
             <p class="person__role">{{ person.role }}</p>
+            {% else %}
+            <p class="person__role person__role--missing">Role still needed</p>
+            {% endif %}
             {% if person.bio %}<p class="person__bio">{{ person.bio }}</p>{% endif %}
           </div>
+          {% endif %}
           {% endfor %}
         </div>
       </div>
