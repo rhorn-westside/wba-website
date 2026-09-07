@@ -465,6 +465,22 @@ address { font-style: normal; }
 /* auto-fill, not auto-fit: a group with one person keeps a card-sized card
    instead of stretching across the whole row. */
 .faculty-group .grid--4 { grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+
+/* Three across, not four, for the teaching sections.
+   Five teachers in a four-wide grid leaves one person stranded on a row of
+   his own. Three and two reads as a block; four and one reads as a mistake.
+   The column width is still the four-up card width -- calculated from the
+   same track -- so a card here is exactly the size of a card in
+   Administration or Support Staff. Elementary already sat three across, so
+   the two teaching sections now line up with each other exactly. */
+.faculty-group--three .grid--4 {
+  grid-template-columns: repeat(3, calc((100% - 4.5rem) / 4));
+}
+@media (max-width: 61.9rem) {
+  .faculty-group--three .grid--4 {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  }
+}
 /* Support Staff and Fine Arts share one row under Administration. Laid out on
    the same four-column track the full-width groups use, so the cards in this
    row are exactly the width of the cards above and below it. Support Staff
