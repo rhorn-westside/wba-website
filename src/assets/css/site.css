@@ -477,7 +477,10 @@ address { font-style: normal; }
   align-items: start;
 }
 .faculty-pair__wide { grid-column: 1 / span 2; }
-.faculty-pair__narrow { grid-column: 4 / span 1; }
+/* Column 3, not 4. A whole empty column between the two headings read as a
+   mistake rather than as spacing; a gap of a little over twice the card gap
+   separates them without leaving a hole. */
+.faculty-pair__narrow { grid-column: 3 / span 1; margin-left: 1.25rem; }
 
 /* Narrower than this there is no room for two sections abreast, so they stack
    and behave exactly like every other group. */
@@ -505,8 +508,10 @@ address { font-style: normal; }
   color: #8A6A00; font-weight: 700;
   text-transform: uppercase; font-size: .7rem; letter-spacing: .1em;
 }
-.person__name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin: 0 0 .15rem; }
-.person__role { font-size: .85rem; color: var(--red-dark); font-weight: 600; margin: 0 0 .6rem; }
+/* Centred under a square photograph. Ranged left, the name floated away from
+   the picture above it; centred, the two read as one object. */
+.person__name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin: 0 0 .15rem; text-align: center; }
+.person__role { font-size: .85rem; color: var(--red-dark); font-weight: 600; margin: 0 0 .6rem; text-align: center; text-wrap: balance; }
 .person__bio { font-size: .9rem; color: var(--ink-soft); margin: 0; }
 
 /* Steps */
