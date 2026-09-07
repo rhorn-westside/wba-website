@@ -14,6 +14,27 @@
       "photo": "ray-horn"
     },
     {
+      "name": "Mrs. Jennifer Cabrera",
+      "role": "WBC & WBA Secretary",
+      "group": "Support Staff",
+      "bio": "",
+      "photo": "jennifer-cabrera"
+    },
+    {
+      "name": "Mrs. Brenda Horn",
+      "role": "Librarian",
+      "group": "Support Staff",
+      "bio": "",
+      "photo": "brenda-horn"
+    },
+    {
+      "name": "Mrs. Debbie Butts",
+      "role": "Fine Arts Coordinator",
+      "group": "Fine Arts",
+      "bio": "",
+      "photo": "debbie-butts"
+    },
+    {
       "name": "Mrs. Dayde Guerrero",
       "role": "Kindergarten & 1st Grade",
       "group": "Elementary",
@@ -67,27 +88,6 @@
       "group": "Junior & Senior High",
       "bio": "",
       "photo": "jennifer-capizzo"
-    },
-    {
-      "name": "Mrs. Debbie Butts",
-      "role": "Fine Arts Coordinator",
-      "group": "Fine Arts",
-      "bio": "",
-      "photo": "debbie-butts"
-    },
-    {
-      "name": "Mrs. Jennifer Cabrera",
-      "role": "WBC & WBA Secretary",
-      "group": "Support Staff",
-      "bio": "",
-      "photo": "jennifer-cabrera"
-    },
-    {
-      "name": "Mrs. Brenda Horn",
-      "role": "Librarian",
-      "group": "Support Staff",
-      "bio": "",
-      "photo": "brenda-horn"
     }
   ]
 }

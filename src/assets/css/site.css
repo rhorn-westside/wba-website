@@ -465,6 +465,26 @@ address { font-style: normal; }
 /* auto-fill, not auto-fit: a group with one person keeps a card-sized card
    instead of stretching across the whole row. */
 .faculty-group .grid--4 { grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+/* Support Staff and Fine Arts share one row under Administration. Laid out on
+   the same four-column track the full-width groups use, so the cards in this
+   row are exactly the width of the cards above and below it. Support Staff
+   takes columns 1–2, Fine Arts takes column 4, and the empty third column is
+   the gap between them. */
+.faculty-pair {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+.faculty-pair__wide { grid-column: 1 / span 2; }
+.faculty-pair__narrow { grid-column: 4 / span 1; }
+
+/* Narrower than this there is no room for two sections abreast, so they stack
+   and behave exactly like every other group. */
+@media (max-width: 61.9rem) {
+  .faculty-pair { display: block; }
+}
+
 .faculty-group h2 {
   font-size: 1.15rem; letter-spacing: .1em; text-transform: uppercase;
   font-family: var(--sans); font-weight: 700; color: var(--ink-faint);
