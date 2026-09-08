@@ -14,7 +14,6 @@ The administration reserves the right to decide what is and is not acceptable. I
 
 ## General guidelines — all students
 
-- Students remain in dress code until they are off campus, and may not change out of school clothes in the restroom.
 - Appearance should be conservative, neat, and reflect refinement.
 - No clothing promoting other elementary schools, high schools or colleges.
 - Only the WBA logo may be displayed, in the top left area of shirts.
@@ -23,10 +22,6 @@ The administration reserves the right to decide what is and is not acceptable. I
 - Sunglasses, hats, hoodies, coats and jackets are not worn in classrooms or buildings.
 - No clothing that appears excessively worn, including stylish fraying or holes.
 - All clothing evenly dyed, one consistent color throughout.
-- Rubber wristbands are not worn.
-- Students do not write on their hands, arms, face or any other part of the body.
-
-Students who violate the dress code may be sent home or kept in the office while a parent is contacted. Time out of class may be treated as an unexcused absence or tardy depending on how much class is missed, and it is the student's responsibility to find out what was covered.
 
 ## Boys
 
