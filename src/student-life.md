@@ -1,11 +1,11 @@
 ---
-layout: layouts/page.njk
-eyebrow: Student Life
 title: Student Life
-lede: Chapel, fine arts, athletics and the ordinary rhythm of a small school where everyone is known.
+lede: Chapel, fine arts, athletics and the ordinary rhythm of a small school
+  where everyone is known.
+eyebrow: Student Life
+layout: layouts/page.njk
 permalink: /student-life/
 ---
-
 ## Chapel
 
 Chapel is a regular part of the school week — singing, Scripture and preaching, with the whole school together. Students in 6th grade and above wear a tie and dress shirt on chapel days, and every student brings a Bible.
@@ -20,7 +20,6 @@ Fine arts is treated as a vital part of preparing a well-rounded student — dev
 - Senior High Ensemble
 - Art
 - Speech
-- Private instrumental lessons
 
 Through the year students take part in dramatic, choral and instrumental programs. Attendance and faithful participation are required until a program is completed, and **participation is a major part of the music grade**. Please let your pastor and church leaders know about these commitments, and mark the dates clearly so nothing conflicts.
 
